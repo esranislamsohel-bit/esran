@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ইসরান ক্রিয়েটিভ কর্নার | ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            overflow-x: hidden;
+        }
+        
+        /* লোডিং স্ক্রিন */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .loading-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .loading-spinner {
+            width: 80px;
+            height: 80px;
+            border: 5px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #e74c3c;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+        
+        @keyframes spin {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-content h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* হেডার স্টাইল */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: #e74c3c;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        .nav-cta {
+            background-color: #e74c3c;
+            color: white !important;
+            padding: 8px 20px;
+            border-radius: 4px;
+        }
+        
+        .nav-cta:hover {
+            background-color: #c0392b;
+            color: white !important;
+        }
+        
+        /* স্লাইডার ব্যানার */
+        .banner-slider {
+            position: relative;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            margin-bottom: 60px;
+        }
+        
+        .slider-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+        
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .slide.active {
+            opacity: 1;
+        }
+        
+        .slide-content {
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        .slide-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .slide-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .dot.active {
+            background-color: #e74c3c;
+        }
+        
+        .slider-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+        
+        .slider-btn {
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .slider-btn:hover {
+            background-color: rgba(231, 76, 60, 0.8);
+        }
+        
+        /* প্রোডাক্ট শোয়েস */
+        .product-showcase {
+            padding: 80px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        
+        .product-badge {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        
+        .product-main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .product-image {
+            flex: 1;
+            max-width: 500px;
+            min-width: 300px;
+        }
+        
+        .product-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .product-details {
+            flex: 1;
+            max-width: 500px;
+            min-width: 300px;
+            text-align: left;
+        }
+        
+        .product-title {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .product-price {
+            font-size: 42px;
+            font-weight: 700;
+            color: #e74c3c;
+            margin-bottom: 20px;
+        }
+        
+        .product-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+        
+        /* ফিচার হাইলাইট */
+        .features-highlight {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 20px;
+        }
+        
+        .feature-box {
+            flex: 1;
+            min-width: 250px;
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            font-size: 40px;
+            color: #e74c3c;
+            margin-bottom: 15px;
+        }
+        
+        .feature-box h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        /* কনটেন্ট ডিটেইলস */
+        .content-details {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .content-section {
+            margin-bottom: 60px;
+        }
+        
+        .content-section h3 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .content-section h3:after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #e74c3c;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .content-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .content-card h4 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .content-card h4 i {
+            color: #e74c3c;
+            margin-right: 10px;
+            font-size: 24px;
+        }
+        
+        .content-list {
+            list-style: none;
+        }
+        
+        .content-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .content-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        .file-count {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        .total-size {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 40px;
+            display: inline-block;
+        }
+        
+        /* ডাউনলোড নির্দেশিকা */
+        .download-guide {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .guide-box {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 30px;
+            text-align: left;
+        }
+        
+        .guide-box ol {
+            padding-left: 20px;
+        }
+        
+        .guide-box li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .important-note {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 30px;
+            font-weight: 600;
+        }
+        
+        /* অর্ডার প্রক্রিয়া */
+        .order-process {
+            padding: 60px 0;
+            background-color: #fff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .step {
+            flex-basis: 30%;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateY(-10px);
+        }
+        
+        .step-icon {
+            background-color: #e74c3c;
+            color: white;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            border-radius: 50%;
+            font-size: 32px;
+            margin: 0 auto 20px;
+        }
+        
+        .step h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .step p {
+            color: #666;
+        }
+        
+        /* অর্ডার ফর্ম */
+        .order-form-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            display: none;
+        }
+        
+        .active-form {
+            display: block;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-header h3 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .form-header p {
+            color: #777;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+            outline: none;
+            border-color: #e74c3c;
+        }
+        
+        .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .form-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        
+        .btn {
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn-prev {
+            background-color: #f1f1f1;
+            color: #333;
+        }
+        
+        .btn-prev:hover {
+            background-color: #ddd;
+        }
+        
+        .btn-next, .btn-submit {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .btn-next:hover, .btn-submit:hover {
+            background-color: #c0392b;
+        }
+        
+        /* প্রিভিউ ধাপ */
+        .preview-container {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .preview-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .preview-item:last-child {
+            border-bottom: none;
+        }
+        
+        .preview-label {
+            font-weight: 500;
+            color: #555;
+        }
+        
+        /* পেমেন্ট ধাপ */
+        .payment-instruction {
+            background-color: #f0f7ff;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 4px;
+        }
+        
+        .payment-number {
+            font-size: 28px;
+            font-weight: 700;
+            color: #e74c3c;
+            text-align: center;
+            margin: 20px 0;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .payment-steps {
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .payment-steps li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .payment-steps li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        
+        /* কনফার্মেশন ধাপ */
+        .success-container {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .success-icon {
+            font-size: 80px;
+            color: #27ae60;
+            margin-bottom: 30px;
+        }
+        
+        .success-container h3 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .success-container p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .whatsapp-button {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .whatsapp-button i {
+            margin-right: 10px;
+        }
+        
+        .order-id {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-size: 18px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+        
+        .order-details {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* পণ্য তথ্য */
+        .product-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .product-name {
+            font-size: 24px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .product-price {
+            font-size: 28px;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        /* সম্মতি চেকবক্স */
+        .agreement-checkbox {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        
+        .agreement-checkbox input {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .agreement-checkbox label {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.5;
+        }
+        
+        /* ফুটার */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column {
+            flex-basis: 30%;
+        }
+        
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: #e74c3c;
+        }
+        
+        .footer-column p {
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: #e74c3c;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            opacity: 0.7;
+        }
+        
+        /* ধাপ নির্দেশিকা */
+        .step-indicators {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        
+        .step-indicator {
+            display: flex;
+            align-items: center;
+        }
+        
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            color: #777;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        
+        .step-circle.active {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .step-line {
+            width: 60px;
+            height: 3px;
+            background-color: #ddd;
+            margin: 0 10px;
+        }
+        
+        .step-line.active {
+            background-color: #e74c3c;
+        }
+        
+        .step-name {
+            color: #777;
+            font-size: 14px;
+        }
+        
+        .step-name.active {
+            color: #e74c3c;
+            font-weight: 500;
+        }
+        
+        /* ট্রানজিশন স্ক্রিন */
+        .transition-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #2c3e50;
+            z-index: 9998;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.5s ease;
+        }
+        
+        .transition-screen.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .transition-content {
+            text-align: center;
+            color: white;
+        }
+        
+        .transition-icon {
+            font-size: 60px;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .transition-content h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        /* রেস্পন্সিভ স্টাইল */
+        @media (max-width: 992px) {
+            .steps-container {
+                justify-content: center;
+            }
+            
+            .step {
+                flex-basis: 45%;
+                margin: 0 10px 30px;
+            }
+            
+            .footer-column {
+                flex-basis: 45%;
+                margin-bottom: 40px;
+            }
+            
+            .slide-content h2 {
+                font-size: 36px;
+            }
+            
+            .slide-content p {
+                font-size: 18px;
+            }
+            
+            .product-main {
+                flex-direction: column;
+            }
+            
+            .product-details {
+                text-align: center;
+            }
+            
+            .features-highlight {
+                flex-direction: column;
+            }
+            
+            .feature-box {
+                min-width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 5px 10px;
+            }
+            
+            .slide-content h2 {
+                font-size: 28px;
+            }
+            
+            .slide-content p {
+                font-size: 16px;
+            }
+            
+            .step {
+                flex-basis: 100%;
+            }
+            
+            .footer-column {
+                flex-basis: 100%;
+                margin-bottom: 40px;
+            }
+            
+            .order-form-container {
+                padding: 25px;
+            }
+            
+            .banner-slider {
+                height: 400px;
+            }
+            
+            .product-title {
+                font-size: 28px;
+            }
+            
+            .product-price {
+                font-size: 36px;
+            }
+            
+            .content-section h3 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- লোডিং স্ক্রিন -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>ইসরান ক্রিয়েটিভ কর্নার</h2>
+            <p>লোড হচ্ছে... দয়া করে অপেক্ষা করুন</p>
+        </div>
+    </div>
+
+    <!-- ট্রানজিশন স্ক্রিন -->
+    <div class="transition-screen" id="transitionScreen">
+        <div class="transition-content">
+            <div class="transition-icon">
+                <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>অর্ডার প্রক্রিয়া চলছে...</h3>
+            <p>দয়া করে অপেক্ষা করুন</p>
+        </div>
+    </div>
+
+    <!-- হেডার -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>ইসরান <span>ক্রিয়েটিভ কর্নার</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">হোম</a></li>
+                    <li><a href="#">বান্ডেলের বিবরণ</a></li>
+                    <li><a href="#">ডাউনলোড নির্দেশিকা</a></li>
+                    <li><a href="#" class="nav-cta">অর্ডার করুন</a></li>
+                    <li><a href="#">যোগাযোগ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- স্লাইডার ব্যানার -->
+    <section class="banner-slider">
+        <div class="slider-container">
+            <!-- স্লাইড ১ -->
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</h2>
+                    <p>একটি অর্ডারে সব ধরনের গ্রাফিক্স ডিজাইন পান - সবচেয়ে সম্পূর্ণ প্যাকেজ</p>
+                    <button id="start-order-btn" class="cta-button">এখনই অর্ডার করুন</button>
+                </div>
+            </div>
+            
+            <!-- স্লাইড ২ -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>৩০+ ধরণের ডিজাইন ফাইল</h2>
+                    <p>ফটোশপ, কোরেল ড্র, ইলাস্ট্রেটর, মকআপ, ফন্ট, লোগো এবং আরো অনেক কিছু</p>
+                    <button class="cta-button" id="view-features-btn">ফিচার দেখুন</button>
+                </div>
+            </div>
+            
+            <!-- স্লাইড ৩ -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>৫০০,০০০+ ডিজাইন ফাইল</h2>
+                    <p>একটি অর্ডারে ৫ লাখের বেশি প্রফেশনাল ডিজাইন ফাইল পান</p>
+                    <button class="cta-button">অর্ডার করুন</button>
+                </div>
+            </div>
+            
+            <!-- স্লাইড ৪ -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>জীবনকালের অ্যাক্সেস</h2>
+                    <p>একবার কিনুন, আজীবন অ্যাক্সেস পান। যেকোনো সময় ডাউনলোড করুন</p>
+                    <button class="cta-button">ডিটেইলস দেখুন</button>
+                </div>
+            </div>
+            
+            <!-- স্লাইড ৫ -->
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
+                <div class="slide-content">
+                    <h2>সাশ্রয়ী মূল্যে পেশাদার ডিজাইন</h2>
+                    <p>সকলের নাগালের মধ্যে ৫৫৫ জিবি গ্রাফিক্স ডিজাইন</p>
+                    <button class="cta-button">মাত্র ১৫০ টাকায় অর্ডার করুন</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- স্লাইডার নেভিগেশন -->
+        <div class="slider-nav">
+            <button class="slider-btn" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn" id="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <!-- স্লাইডার ডটস -->
+        <div class="slider-dots" id="sliderDots">
+            <!-- ডটস জাভাস্ক্রিপ্ট দ্বারা তৈরি হবে -->
+        </div>
+    </section>
+
+    <!-- প্রোডাক্ট শোয়েস -->
+    <section class="product-showcase">
+        <div class="container">
+            <div class="product-badge">বিশেষ অফার - আজীবন অ্যাক্সেস</div>
+            <h2 class="section-title" style="margin-bottom: 10px;">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</h2>
+            <p style="font-size: 20px; color: #666; max-width: 800px; margin: 0 auto 40px;">একটি অর্ডারে সব ধরনের গ্রাফিক্স ডিজাইন পান - গ্রাফিক ডিজাইনারদের জন্য সম্পূর্ণ সমাধান</p>
+            
+            <div class="product-main">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="গ্রাফিক্স বান্ডেল">
+                </div>
+                
+                <div class="product-details">
+                    <div class="product-price">৳ ১৫০ টাকা</div>
+                    <div class="product-description">
+                        এই বিশেষ প্যাকেজে আপনি একই মূল্যে ৫৫৫ জিবির বেশি গ্রাফিক্স ডিজাইন ফাইল পাবেন। যা একজন গ্রাফিক ডিজাইনার, মার্কেটার বা ব্যবসায়ীর জন্য সম্পূর্ণ প্যাকেজ। একবার কিনুন, আজীবন অ্যাক্সেস পান।
+                    </div>
+                    
+                    <div style="margin: 30px 0;">
+                        <button id="order-now-btn" class="cta-button" style="width: 100%;">
+                            <i class="fas fa-shopping-cart"></i> এখনই অর্ডার করুন - ৳১৫০
+                        </button>
+                    </div>
+                    
+                    <div class="features-highlight">
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-hdd"></i>
+                            </div>
+                            <h4>৫৫৫+ জিবি ফাইল</h4>
+                            <p>সম্পূর্ণ সাইজ ৫৫৫ জিবির বেশি</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <h4>৫০০,০০০+ ফাইল</h4>
+                            <p>৫ লাখের বেশি ডিজাইন ফাইল</p>
+                        </div>
+                        
+                        <div class="feature-box">
+                            <div class="feature-icon">
+                                <i class="fas fa-infinity"></i>
+                            </div>
+                            <h4>আজীবন অ্যাক্সেস</h4>
+                            <p>একবার কিনুন, আজীবন ব্যবহার করুন</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- কনটেন্ট ডিটেইলস -->
+    <section class="content-details">
+        <div class="container">
+            <div class="content-section">
+                <h3>এই বান্ডেলে যা যা পাবেন</h3>
+                <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: #666;">একটি অর্ডারে ৫৫৫ জিবির বেশি ডিজাইন ফাইল</p>
+                
+                <div class="content-grid">
+                    <div class="content-card">
+                        <h4><i class="fas fa-camera"></i> ফটোশপ কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>ইনস্টাগ্রাম স্টোরিজ <span class="file-count">৫০০+</span></li>
+                            <li>ফ্লাইয়ার <span class="file-count">১,০০০+</span></li>
+                            <li>ব্যাকগ্রাউন্ড <span class="file-count">১৫০+</span></li>
+                            <li>অ্যানিমেটেড স্টোরিজ <span class="file-count">১০০+</span></li>
+                            <li>ব্যানার <span class="file-count">১০০+</span></li>
+                            <li>সোশ্যাল মিডিয়া <span class="file-count">১,৪০০+</span></li>
+                            <li>ভিজিটিং কার্ড <span class="file-count">৫০+</span></li>
+                            <li>ডিজিটাল কার্ড <span class="file-count">১২০+</span></li>
+                            <li>ইউটিউব <span class="file-count">১০০+</span></li>
+                            <li>ফেসবুক কভার <span class="file-count">৬০+</span></li>
+                            <li>ব্যবসায়িক কার্ড <span class="file-count">৭০+</span></li>
+                            <li>মেনু <span class="file-count">১০০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-pen-fancy"></i> কোরেল ড্র কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>টি-শার্ট ডিজাইন <span class="file-count">১,০০০+</span></li>
+                            <li>ফ্লাইয়ার <span class="file-count">১৫০+</span></li>
+                            <li>আইকন <span class="file-count">১,০০০+</span></li>
+                            <li>কাপ <span class="file-count">৫০০+</span></li>
+                            <li>পোস্টার <span class="file-count">২০০+</span></li>
+                            <li>ব্যারবার শপ <span class="file-count">১৫০+</span></li>
+                            <li>সার্টিফিকেট <span class="file-count">৫০০+</span></li>
+                            <li>ওয়েডিং ইনভাইটেশন <span class="file-count">৫০০+</span></li>
+                            <li>লোগো এ টু জেড <span class="file-count">১,৫০০+</span></li>
+                            <li>ম্যান্ডালাস <span class="file-count">১,০০০+</span></li>
+                            <li>সাবলিমেশন <span class="file-count">৫০০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-paint-brush"></i> লোগো কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>লোগো ০-০০০ <span class="file-count">৫০০+</span></li>
+                            <li>লোগো AM-AR <span class="file-count">৬০০+</span></li>
+                            <li>লোগো AS-AZ <span class="file-count">২০০+</span></li>
+                            <li>লোগো CO-CO <span class="file-count">২৫০+</span></li>
+                            <li>লোগো CP-CZ <span class="file-count">৪০০+</span></li>
+                            <li>লোগো DA-DE <span class="file-count">২০০+</span></li>
+                            <li>লোগো DF-DM <span class="file-count">৫০০+</span></li>
+                            <li>লোগো DN-DZ <span class="file-count">৫০০+</span></li>
+                            <li>লোগো GA-GE <span class="file-count">৫০০+</span></li>
+                            <li>লোগো GF-GO <span class="file-count">৪৫০+</span></li>
+                            <li>লোগো GP-GZ <span class="file-count">৫০০+</span></li>
+                            <li>লোগো IA-IM <span class="file-count">৫৫০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-font"></i> ফন্ট কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>৫০০+ ফন্ট <span class="file-count">৫০০+</span></li>
+                            <li>১২৫ হাজার সোর্স</li>
+                            <li>রক সোর্স কালেকশন</li>
+                            <li>ভিনটেজ সোর্স</li>
+                            <li>ব্যাংক ও স্টোর আইকন <span class="file-count">৫০+</span></li>
+                            <li>ই-কমার্স আইকন <span class="file-count">৭০+</span></li>
+                            <li>সোশ্যাল মিডিয়া 3D <span class="file-count">৭০+</span></li>
+                            <li>মার্কেটিং আইকন <span class="file-count">৭০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-image"></i> মকআপ কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>ভিজিটিং কার্ড মকআপ <span class="file-count">৩০+</span></li>
+                            <li>ব্র্যান্ড মকআপ <span class="file-count">৫০+</span></li>
+                            <li>কম্পিউটার মকআপ <span class="file-count">২৫+</span></li>
+                            <li>সেল ফোন মকআপ <span class="file-count">৩০+</span></li>
+                            <li>পোস্টার মকআপ <span class="file-count">২৫+</span></li>
+                            <li>বুক মকআপ <span class="file-count">২০+</span></li>
+                            <li>ফোল্ডার মকআপ <span class="file-count">২০+</span></li>
+                            <li>কাপড় মকআপ <span class="file-count">৩০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-file-image"></i> PNG ইমেজ কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>প্রাণী <span class="file-count">১,০০০+</span></li>
+                            <li>গাড়ি <span class="file-count">১,০০০+</span></li>
+                            <li>খাবার <span class="file-count">২০০+</span></li>
+                            <li>ইলেকট্রনিক্স <span class="file-count">৫০০+</span></li>
+                            <li>ফল <span class="file-count">৫০০+</span></li>
+                            <li>প্রকৃতি <span class="file-count">৫০০+</span></li>
+                            <li>টাকা <span class="file-count">১৫০+</span></li>
+                            <li>গহনা <span class="file-count">৩০০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-palette"></i> অ্যাডোব ইলাস্ট্রেটর</h4>
+                        <ul class="content-list">
+                            <li>BBQ গ্রিল <span class="file-count">৩০+</span></li>
+                            <li>বার্গার ফুড <span class="file-count">৪০+</span></li>
+                            <li>স্কাল <span class="file-count">১৮০+</span></li>
+                            <li>ক্রাউন <span class="file-count">৩০+</span></li>
+                            <li>ট্যাটু আর্ট <span class="file-count">১০০+</span></li>
+                            <li>ডিজে <span class="file-count">৫০+</span></li>
+                            <li>ফাস্ট ফুড <span class="file-count">১০০+</span></li>
+                            <li>লোগো <span class="file-count">১,০০০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-video"></i> ভিডিও এডিটিং কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>অ্যাডোব প্রিমিয়ার কালেকশন</li>
+                            <li>অ্যাডোব আফটার ইফেক্টস কালেকশন</li>
+                            <li>সাইবারপাঙ্ক V3</li>
+                            <li>সাইন পাঞ্চ</li>
+                            <li>HUD 2.0</li>
+                            <li>ইনফিনিটি টুল V3</li>
+                            <li>লিকুইড এলিমেন্ট</li>
+                            <li>মোশন প্রো গ্লিচ</li>
+                            <li>অ্যানিমেটেড স্টোরিজ</li>
+                            <li>টেকনোলজি মোশন</li>
+                            <li>ট্রানজিশন <span class="file-count">৩+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-file-powerpoint"></i> পাওয়ারপয়েন্ট কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>পাওয়ারপয়েন্ট টেমপ্লেট <span class="file-count">৭+</span></li>
+                            <li>প্রিন্ট <span class="file-count">১,০০০+</span></li>
+                            <li>স্ট্যাম্পড ভেক্টর <span class="file-count">১৮+</span></li>
+                            <li>ফ্যাক্টরি প্রিন্ট <span class="file-count">১০০+</span></li>
+                            <li>প্রিন্টেড শার্ট ডিজাইন <span class="file-count">৪০+</span></li>
+                            <li>প্রিন্টেড ফ্লিপ ফ্লপ <span class="file-count">২,০০০+</span></li>
+                            <li>প্রিন্টেড শার্ট <span class="file-count">৭০০+</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-calendar-alt"></i> বিশেষ কালেকশন</h4>
+                        <ul class="content-list">
+                            <li>ক্যালেন্ডার ২০২১ <span class="file-count">৫০+</span></li>
+                            <li>৫০০ ইন্ডিয়ান ফেস্টিভাল <span class="file-count">৪ জিবি</span></li>
+                            <li>১০০০+ এডিটেবল টি-শার্ট <span class="file-count">১+ জিবি</span></li>
+                            <li>১০০০ লোগো টিপস <span class="file-count">৬২ এমবি</span></li>
+                            <li>১৫০০+ টি-শার্ট ডিজাইন <span class="file-count">১ জিবি</span></li>
+                            <li>৩ডি ওয়াল ব্যাকগ্রাউন্ড <span class="file-count">২৫ জিবি</span></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-card">
+                        <h4><i class="fas fa-gift"></i> বোনাস ফাইল</h4>
+                        <ul class="content-list">
+                            <li>ইনস্টাগ্রাম মোশন গ্রাফিক্স <span class="file-count">১.২ জিবি</span></li>
+                            <li>গ্রাফিক্স প্যাক <span class="file-count">২+ জিবি</span></li>
+                            <li>ব্যবসায়িক ডিজাইন <span class="file-count">১ জিবি</span></li>
+                            <li>১০০ সার্টিফিকেট মেগা বান্ডেল <span class="file-count">৬৫৯ এমবি</span></li>
+                            <li>৬৪০+ প্রিমেড লোগো মকআপ <span class="file-count">১৬৭ এমবি</span></li>
+                            <li>ইনস্টাগ্রাম বান্ডেল <span class="file-count">২২৬ এমবি</span></li>
+                            <li>১০০+ বিজনেস কার্ড <span class="file-count">১ জিবি</span></li>
+                            <li>৫৯৮৫+ লাইটরুম প্রিসেট <span class="file-count">৫৫ এমবি</span></li>
+                            <li>৬০০+ মেগা লোগো টেমপ্লেট <span class="file-count">৮৬২ এমবি</span></li>
+                            <li>১০০০+ টি-শার্ট ডিজাইন <span class="file-count">৫০০+ এমবি</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <div class="total-size">মোট সাইজ: ৫৫৫+ জিবি</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ডাউনলোড নির্দেশিকা -->
+    <section class="download-guide">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">ডাউনলোড নির্দেশিকা</h2>
+                <p style="color: rgba(255,255,255,0.8);">ফাইল ডাউনলোড করতে এই নির্দেশিকা অনুসরণ করুন</p>
+            </div>
+            
+            <div class="guide-box">
+                <ol>
+                    <li><strong>WinRAR ইন্সটল করুন:</strong> ফাইল এক্সট্র্যাক্ট করার জন্য WinRAR সফটওয়্যার ইন্সটল করুন। ডাউনলোড লিংক: <a href="https://winrar.en.uptodown.com/windows" style="color: #3498db;">https://winrar.en.uptodown.com/windows</a></li>
+                    <li><strong>গুগল অ্যাকাউন্ট ব্যবহার করুন:</strong> ডাউনলোড করতে গুগল অ্যাকাউন্ট ব্যবহার করার পরামর্শ দেওয়া হচ্ছে।</li>
+                    <li><strong>একসাথে সব ফাইল ডাউনলোড করবেন না:</strong> আপনার ইন্টারনেট স্পিড এবং IP লিমিটেশনের কারণে ফাইল আটকে যেতে পারে। একবারে এক বা দুইটি ফাইল ডাউনলোড করুন।</li>
+                    <li><strong>পাসওয়ার্ড:</strong> কিছু ফাইল পাসওয়ার্ড প্রটেক্টেড। প্রয়োজনীয় পাসওয়ার্ড দেওয়া হবে।</li>
+                    <li><strong>ডাউনলোড লিংক ভ্যালিডিটি:</strong> লিংকগুলো আজীবনের জন্য ভ্যালিড। তবে যে কোন সময় লিংক পরিবর্তন হতে পারে, তাই দ্রুত ডাউনলোড করে রাখুন।</li>
+                    <li><strong>ব্যাকআপ রাখুন:</strong> ডাউনলোড করা ফাইলগুলো আপনার কম্পিউটার বা ক্লাউড স্টোরেজে ব্যাকআপ রাখুন।</li>
+                </ol>
+            </div>
+            
+            <div class="important-note">
+                <i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ: লিংকগুলো গুগল ড্রাইভের এবং ভবিষ্যতে পরিবর্তন হতে পারে। আপনি ফাইল ডাউনলোড করে আপনার ডিভাইসে সংরক্ষণ করবেন, তা না হলে ভবিষ্যতে ফাইল নাও পেতে পারেন।
+            </div>
+        </div>
+    </section>
+
+    <!-- অর্ডার প্রক্রিয়া -->
+    <section class="order-process">
+        <div class="container">
+            <div class="section-title">
+                <h2>অর্ডার করার সহজ প্রক্রিয়া</h2>
+                <p>মাত্র ৩টি সহজ ধাপে আপনার ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার করুন</p>
+            </div>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3>তথ্য দিন</h3>
+                    <p>আপনার নাম, ফোন নম্বর ও প্রয়োজনীয় তথ্য দিন। সঠিক তথ্য না দিলে অর্ডার সম্পূর্ণ হবে না।</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>পেমেন্ট করুন</h3>
+                    <p>বিকাশে ০১৬৪১১৩৮৯৩৪ নম্বরে ১৫০ টাকা পাঠান এবং ট্রানজেকশন আইডি সংরক্ষণ করুন।</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>কনফার্ম করুন</h3>
+                    <p>অর্ডার আইডি ও ট্রানজেকশন আইডি WhatsApp এ পাঠান এবং ডাউনলোড লিংক পান।</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- অর্ডার ফর্ম কন্টেইনার -->
+    <div class="container">
+        <!-- ধাপ নির্দেশিকা -->
+        <div class="step-indicators" id="step-indicators">
+            <div class="step-indicator">
+                <div class="step-circle active" id="step-1-circle">১</div>
+                <div class="step-name active" id="step-1-name">তথ্য</div>
+            </div>
+            <div class="step-line" id="line-1-2"></div>
+            <div class="step-indicator">
+                <div class="step-circle" id="step-2-circle">২</div>
+                <div class="step-name" id="step-2-name">প্রিভিউ</div>
+            </div>
+            <div class="step-line" id="line-2-3"></div>
+            <div class="step-indicator">
+                <div class="step-circle" id="step-3-circle">৩</div>
+                <div class="step-name" id="step-3-name">পেমেন্ট</div>
+            </div>
+            <div class="step-line" id="line-3-4"></div>
+            <div class="step-indicator">
+                <div class="step-circle" id="step-4-circle">৪</div>
+                <div class="step-name" id="step-4-name">কনফার্ম</div>
+            </div>
+        </div>
+        
+        <!-- ধাপ ১: গ্রাহকের তথ্য ফর্ম -->
+        <div id="form-step-1" class="order-form-container active-form">
+            <div class="form-header">
+                <h3>আপনার তথ্য দিন</h3>
+                <p>দয়া করে সঠিকভাবে আপনার বিবরণ প্রদান করুন</p>
+            </div>
+            
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i> <strong>গুরুত্বপূর্ণ নোট:</strong> আপনি যদি ভুল তথ্য দেন (ভুল ফোন নম্বর বা ইমেইল), তাহলে আপনি আপনার অর্ডার সম্পূর্ণ করতে পারবেন না এবং আপনার টাকা ফেরত পাবেন না। দয়া করে দ্বিতীয়বার চেক করে তথ্য দিন।
+            </div>
+            
+            <div class="product-info">
+                <div class="product-name">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</div>
+                <div class="product-price">৳ ১৫০ টাকা</div>
+                <div style="color: #666; font-size: 16px; margin-top: 10px;">একটি অর্ডারে ৫০০,০০০+ ডিজাইন ফাইল</div>
+            </div>
+            
+            <form id="customer-form">
+                <div class="form-group">
+                    <label for="name">আপনার পুরো নাম *</label>
+                    <input type="text" id="name" name="name" required placeholder="আপনার পুরো নাম লিখুন">
+                    <div class="error-message" id="name-error">দয়া করে একটি বৈধ নাম লিখুন</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">ফোন নম্বর *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+                    <div class="error-message" id="phone-error">দয়া করে একটি বৈধ ১১-অঙ্কের ফোন নম্বর লিখুন (যেমন, ০১৭১২৩৪৫৬৭৮)</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">ইমেইল ঠিকানা *</label>
+                    <input type="email" id="email" name="email" required placeholder="আপনার ইমেইল ঠিকানা">
+                    <div class="error-message" id="email-error">দয়া করে একটি বৈধ ইমেইল ঠিকানা লিখুন</div>
+                </div>
+                
+                <div class="agreement-checkbox">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">আমি স্বীকার করছি যে আমি সঠিক তথ্য দিয়েছি এবং বুঝতে পেরেছি যে যদি আমি ভুল তথ্য দিই, তাহলে আমার অর্ডার সম্পূর্ণ হবে না এবং টাকা ফেরত পাওয়া যাবে না। আমি ডাউনলোড নির্দেশিকা পড়েছি এবং বুঝেছি।</label>
+                </div>
+                
+                <div class="form-navigation">
+                    <div></div>
+                    <button type="button" id="next-to-preview" class="btn btn-next">পরবর্তী: প্রিভিউ দেখুন</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- ধাপ ২: অর্ডার প্রিভিউ -->
+        <div id="form-step-2" class="order-form-container">
+            <div class="form-header">
+                <h3>আপনার অর্ডার পর্যালোচনা করুন</h3>
+                <p>অগ্রসর হওয়ার আগে দয়া করে নিশ্চিত করুন যে সমস্ত তথ্য সঠিক</p>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-name">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</div>
+                <div class="product-price">৳ ১৫০ টাকা</div>
+            </div>
+            
+            <div class="preview-container">
+                <div class="preview-item">
+                    <span class="preview-label">পুরো নাম:</span>
+                    <span id="preview-name">প্রদান করা হয়নি</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">ফোন নম্বর:</span>
+                    <span id="preview-phone">প্রদান করা হয়নি</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">ইমেইল ঠিকানা:</span>
+                    <span id="preview-email">প্রদান করা হয়নি</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">পণ্য:</span>
+                    <span>৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</span>
+                </div>
+                <div class="preview-item">
+                    <span class="preview-label">মূল্য:</span>
+                    <span>৳ ১৫০ টাকা</span>
+                </div>
+            </div>
+            
+            <div class="form-navigation">
+                <button type="button" id="back-to-details" class="btn btn-prev">পিছনে যান</button>
+                <button type="button" id="next-to-payment" class="btn btn-next">পরবর্তী: পেমেন্ট</button>
+            </div>
+        </div>
+
+        <!-- ধাপ ৩: পেমেন্ট নির্দেশনা -->
+        <div id="form-step-3" class="order-form-container">
+            <div class="form-header">
+                <h3>পেমেন্ট করুন</h3>
+                <p>অর্ডারটি সম্পূর্ণ করার জন্য দয়া করে নিচের নির্দেশনা অনুসরণ করুন</p>
+            </div>
+            
+            <div class="payment-instruction">
+                <h4 style="margin-bottom: 15px; color: #2c3e50;">পেমেন্ট করার ধাপসমূহ:</h4>
+                <ol class="payment-steps">
+                    <li>আপনার বিকাশ অ্যাপ খুলুন</li>
+                    <li>"Send Money" অপশনে ক্লিক করুন</li>
+                    <li>নিচের নম্বরে ১৫০ টাকা পাঠান</li>
+                    <li>ট্রানজেকশন আইডি সংরক্ষণ করুন</li>
+                    <li>পরবর্তী ধাপে ট্রানজেকশন আইডি দিন</li>
+                </ol>
+            </div>
+            
+            <div class="payment-number">
+                <i class="fas fa-mobile-alt"></i> ০১৬৪১১৩৮৯৩৪
+            </div>
+            
+            <div class="form-group">
+                <label for="transaction-id">আপনার বিকাশ ট্রানজেকশন আইডি *</label>
+                <input type="text" id="transaction-id" name="transaction-id" required placeholder="যেমন: 8A7B6C5D4E3F">
+                <div class="error-message" id="transaction-error">দয়া করে একটি বৈধ ট্রানজেকশন আইডি লিখুন</div>
+            </div>
+            
+            <div class="form-navigation">
+                <button type="button" id="back-to-preview" class="btn btn-prev">পিছনে যান</button>
+                <button type="button" id="next-to-confirmation" class="btn btn-next">পরবর্তী: কনফার্মেশন</button>
+            </div>
+        </div>
+
+        <!-- ধাপ ৪: কনফার্মেশন -->
+        <div id="form-step-4" class="order-form-container">
+            <div class="success-container">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                
+                <h3>অর্ডার সফলভাবে জমা দেওয়া হয়েছে!</h3>
+                <p>আপনার অর্ডার জন্য ধন্যবাদ। আপনার অর্ডার আইডি হল:</p>
+                <div class="order-id" id="order-id-display">ESRAN-GRAPHICS-00123</div>
+                
+                <div class="order-details">
+                    <h4 style="margin-bottom: 15px; color: #2c3e50;">আপনার অর্ডার বিবরণ:</h4>
+                    <p><strong>নাম:</strong> <span id="confirm-name">প্রদান করা হয়নি</span></p>
+                    <p><strong>ফোন:</strong> <span id="confirm-phone">প্রদান করা হয়নি</span></p>
+                    <p><strong>ইমেইল:</strong> <span id="confirm-email">প্রদান করা হয়নি</span></p>
+                    <p><strong>পণ্য:</strong> ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</p>
+                    <p><strong>মূল্য:</strong> ৳ ১৫০ টাকা</p>
+                    <p><strong>ট্রানজেকশন আইডি:</strong> <span id="confirm-transaction">প্রদান করা হয়নি</span></p>
+                </div>
+                
+                <p>আপনার অর্ডার কনফার্ম করতে এবং ডাউনলোড লিংক পেতে দয়া করে নিচের WhatsApp বাটনে ক্লিক করুন এবং স্বয়ংক্রিয়ভাবে পাঠানো মেসেজটি সেন্ড করুন।</p>
+                <p><strong>মনে রাখবেন:</strong> WhatsApp এ কনফার্ম না করলে আপনার ডাউনলোড লিংক পাঠানো হবে না।</p>
+                
+                <a href="https://wa.me/8801641138934" target="_blank" class="whatsapp-button" id="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> WhatsApp এ কনফার্ম করুন এবং লিংক পান
+                </a>
+                
+                <p style="margin-top: 30px; font-size: 16px; color: #777;">
+                    কোন সমস্যা হলে কল করুন: <strong>০১৬৪১১৩৮৯৩৪</strong><br>
+                    আমাদের ঠিকানা: হাউস ০১, রোড ০১, মোহনগর প্রজেক্ট, পশ্চিম রামপুরা, ঢাকা ১২১৯
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ফুটার -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ইসরান ক্রিয়েটিভ কর্নার</h3>
+                    <p>আমরা গ্রাফিক ডিজাইনারদের জন্য সম্পূর্ণ সমাধান নিয়ে আসছি। ৫৫৫+ জিবি গ্রাফিক্স বান্ডেলের মাধ্যমে আপনি পাবেন সব ধরনের ডিজাইন ফাইল।</p>
+                    <p>একবার কিনুন, আজীবন ব্যবহার করুন।</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>দ্রুত লিংক</h3>
+                    <ul>
+                        <li><a href="#">হোম</a></li>
+                        <li><a href="#">বান্ডেলের বিবরণ</a></li>
+                        <li><a href="#">ডাউনলোড নির্দেশিকা</a></li>
+                        <li><a href="#">অর্ডার করুন</a></li>
+                        <li><a href="#">যোগাযোগ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>যোগাযোগের তথ্য</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> হাউস ০১, রোড ০১, মোহনগর প্রজেক্ট, পশ্চিম রামপুরা, ঢাকা ১২১৯</p>
+                    <p><i class="fas fa-phone"></i> ০১৬৪১১৩৮৯৩৪</p>
+                    <p><i class="fas fa-envelope"></i> support@esrancreative.com</p>
+                    <p><i class="fas fa-clock"></i> সকাল ৯টা - রাত ১০টা (প্রতিদিন)</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; ২০২৩ ইসরান ক্রিয়েটিভ কর্নার। সর্বস্বত্ব সংরক্ষিত।</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // DOM Elements
+        const loadingScreen = document.getElementById('loadingScreen');
+        const transitionScreen = document.getElementById('transitionScreen');
+        const startOrderBtn = document.getElementById('start-order-btn');
+        const orderNowBtn = document.getElementById('order-now-btn');
+        const viewFeaturesBtn = document.getElementById('view-features-btn');
+        
+        const step1Form = document.getElementById('form-step-1');
+        const step2Preview = document.getElementById('form-step-2');
+        const step3Payment = document.getElementById('form-step-3');
+        const step4Confirmation = document.getElementById('form-step-4');
+        
+        const stepCircles = document.querySelectorAll('.step-circle');
+        const stepNames = document.querySelectorAll('.step-name');
+        const stepLines = document.querySelectorAll('.step-line');
+        
+        const nextToPreviewBtn = document.getElementById('next-to-preview');
+        const backToDetailsBtn = document.getElementById('back-to-details');
+        const nextToPaymentBtn = document.getElementById('next-to-payment');
+        const backToPreviewBtn = document.getElementById('back-to-preview');
+        const nextToConfirmationBtn = document.getElementById('next-to-confirmation');
+        
+        // Form input fields
+        const nameInput = document.getElementById('name');
+        const phoneInput = document.getElementById('phone');
+        const emailInput = document.getElementById('email');
+        const transactionIdInput = document.getElementById('transaction-id');
+        const agreementCheckbox = document.getElementById('agreement');
+        
+        // Error message elements
+        const nameError = document.getElementById('name-error');
+        const phoneError = document.getElementById('phone-error');
+        const emailError = document.getElementById('email-error');
+        const transactionError = document.getElementById('transaction-error');
+        
+        // Preview elements
+        const previewName = document.getElementById('preview-name');
+        const previewPhone = document.getElementById('preview-phone');
+        const previewEmail = document.getElementById('preview-email');
+        
+        // Confirmation elements
+        const orderIdDisplay = document.getElementById('order-id-display');
+        const confirmName = document.getElementById('confirm-name');
+        const confirmPhone = document.getElementById('confirm-phone');
+        const confirmEmail = document.getElementById('confirm-email');
+        const confirmTransaction = document.getElementById('confirm-transaction');
+        const whatsappButton = document.getElementById('whatsapp-button');
+        
+        // Slider elements
+        const slides = document.querySelectorAll('.slide');
+        const prevSlideBtn = document.getElementById('prev-slide');
+        const nextSlideBtn = document.getElementById('next-slide');
+        const sliderDots = document.getElementById('sliderDots');
+        
+        // Current step tracking
+        let currentStep = 1;
+        let currentSlide = 0;
+        let generatedOrderId = '';
+        
+        // লোডিং স্ক্রিন লুকানো
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+                
+                // Generate order ID
+                generatedOrderId = 'ESRAN-GRAPHICS-' + new Date().getFullYear() + '-' + Math.floor(10000 + Math.random() * 90000);
+                orderIdDisplay.textContent = generatedOrderId;
+                
+                // Create slider dots
+                createSliderDots();
+            }, 1500);
+        });
+        
+        // স্লাইডার ডটস তৈরি
+        function createSliderDots() {
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+                if (i === 0) dot.classList.add('active');
+                dot.dataset.index = i;
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                });
+                sliderDots.appendChild(dot);
+            }
+        }
+        
+        // স্লাইড পরিবর্তন
+        function goToSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            document.querySelectorAll('.dot')[currentSlide].classList.remove('active');
+            
+            currentSlide = n;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            slides[currentSlide].classList.add('active');
+            document.querySelectorAll('.dot')[currentSlide].classList.add('active');
+        }
+        
+        // পরবর্তী স্লাইড
+        function nextSlide() {
+            goToSlide(currentSlide + 1);
+        }
+        
+        // আগের স্লাইড
+        function prevSlide() {
+            goToSlide(currentSlide - 1);
+        }
+        
+        // স্লাইডার ইভেন্ট লিসেনার
+        prevSlideBtn.addEventListener('click', prevSlide);
+        nextSlideBtn.addEventListener('click', nextSlide);
+        
+        // অটো স্লাইড পরিবর্তন
+        setInterval(nextSlide, 5000);
+        
+        // Start order process
+        startOrderBtn.addEventListener('click', () => {
+            document.querySelector('.order-form-container.active-form').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        orderNowBtn.addEventListener('click', () => {
+            document.querySelector('.order-form-container.active-form').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        viewFeaturesBtn.addEventListener('click', () => {
+            document.querySelector('.content-details').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // ট্রানজিশন স্ক্রিন দেখানো
+        function showTransition() {
+            transitionScreen.classList.add('active');
+            setTimeout(() => {
+                transitionScreen.classList.remove('active');
+            }, 1000);
+        }
+        
+        // Validation functions
+        function validateName() {
+            const name = nameInput.value.trim();
+            if (name.length < 2) {
+                nameError.style.display = 'block';
+                return false;
+            } else {
+                nameError.style.display = 'none';
+                return true;
+            }
+        }
+        
+        function validatePhone() {
+            const phone = phoneInput.value.trim();
+            const phoneRegex = /^01[3-9]\d{8}$/;
+            if (!phoneRegex.test(phone)) {
+                phoneError.style.display = 'block';
+                return false;
+            } else {
+                phoneError.style.display = 'none';
+                return true;
+            }
+        }
+        
+        function validateEmail() {
+            const email = emailInput.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                emailError.style.display = 'block';
+                return false;
+            } else {
+                emailError.style.display = 'none';
+                return true;
+            }
+        }
+        
+        function validateTransactionId() {
+            const transactionId = transactionIdInput.value.trim();
+            if (transactionId.length < 8) {
+                transactionError.style.display = 'block';
+                return false;
+            } else {
+                transactionError.style.display = 'none';
+                return true;
+            }
+        }
+        
+        // Update preview with form data
+        function updatePreview() {
+            previewName.textContent = nameInput.value.trim() || 'প্রদান করা হয়নি';
+            previewPhone.textContent = phoneInput.value.trim() || 'প্রদান করা হয়নি';
+            previewEmail.textContent = emailInput.value.trim() || 'প্রদান করা হয়নি';
+        }
+        
+        // Update confirmation with form data
+        function updateConfirmation() {
+            confirmName.textContent = nameInput.value.trim() || 'প্রদান করা হয়নি';
+            confirmPhone.textContent = phoneInput.value.trim() || 'প্রদান করা হয়নি';
+            confirmEmail.textContent = emailInput.value.trim() || 'প্রদান করা হয়নি';
+            confirmTransaction.textContent = transactionIdInput.value.trim() || 'প্রদান করা হয়নি';
+            
+            // Update WhatsApp link
+            const whatsappMessage = `ইসরান ক্রিয়েটিভ কর্নার - ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার%0A%0Aঅর্ডার আইডি: ${generatedOrderId}%0Aনাম: ${nameInput.value.trim()}%0Aফোন: ${phoneInput.value.trim()}%0Aইমেইল: ${emailInput.value.trim()}%0Aপণ্য: ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল%0Aমূল্য: ৳১৫০ টাকা%0Aট্রানজেকশন আইডি: ${transactionIdInput.value.trim()}%0A%0Aদয়া করে আমার অর্ডারটি কনফার্ম করুন এবং ডাউনলোড লিংক দিন।`;
+            whatsappButton.href = `https://wa.me/8801641138934?text=${encodeURIComponent(whatsappMessage)}`;
+        }
+        
+        // Update step indicators
+        function updateStepIndicators(step) {
+            // Reset all indicators
+            stepCircles.forEach(circle => circle.classList.remove('active'));
+            stepNames.forEach(name => name.classList.remove('active'));
+            stepLines.forEach(line => line.classList.remove('active'));
+            
+            // Activate current step and previous steps
+            for (let i = 1; i <= step; i++) {
+                document.getElementById(`step-${i}-circle`).classList.add('active');
+                document.getElementById(`step-${i}-name`).classList.add('active');
+                
+                if (i < step) {
+                    document.getElementById(`line-${i}-${i+1}`).classList.add('active');
+                }
+            }
+        }
+        
+        // Show specific form step
+        function showStep(step) {
+            showTransition();
+            
+            setTimeout(() => {
+                // Hide all steps
+                step1Form.classList.remove('active-form');
+                step2Preview.classList.remove('active-form');
+                step3Payment.classList.remove('active-form');
+                step4Confirmation.classList.remove('active-form');
+                
+                // Show current step
+                if (step === 1) {
+                    step1Form.classList.add('active-form');
+                } else if (step === 2) {
+                    step2Preview.classList.add('active-form');
+                    updatePreview();
+                } else if (step === 3) {
+                    step3Payment.classList.add('active-form');
+                } else if (step === 4) {
+                    step4Confirmation.classList.add('active-form');
+                    updateConfirmation();
+                }
+                
+                // Update step indicators
+                updateStepIndicators(step);
+                currentStep = step;
+                
+                // Scroll to form
+                document.querySelector('.order-form-container.active-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 500);
+        }
+        
+        // Step 1 to Step 2
+        nextToPreviewBtn.addEventListener('click', () => {
+            const isNameValid = validateName();
+            const isPhoneValid = validatePhone();
+            const isEmailValid = validateEmail();
+            
+            if (!agreementCheckbox.checked) {
+                alert('দয়া করে সম্মতি চেকবক্সটি চেক করুন');
+                return;
+            }
+            
+            if (isNameValid && isPhoneValid && isEmailValid) {
+                showStep(2);
+            }
+        });
+        
+        // Step 2 to Step 1
+        backToDetailsBtn.addEventListener('click', () => {
+            showStep(1);
+        });
+        
+        // Step 2 to Step 3
+        nextToPaymentBtn.addEventListener('click', () => {
+            showStep(3);
+        });
+        
+        // Step 3 to Step 2
+        backToPreviewBtn.addEventListener('click', () => {
+            showStep(2);
+        });
+        
+        // Step 3 to Step 4
+        nextToConfirmationBtn.addEventListener('click', () => {
+            const isTransactionValid = validateTransactionId();
+            if (!isTransactionValid) return;
+            
+            showStep(4);
+        });
+        
+        // Real-time validation for form fields
+        nameInput.addEventListener('blur', validateName);
+        phoneInput.addEventListener('blur', validatePhone);
+        emailInput.addEventListener('blur', validateEmail);
+        transactionIdInput.addEventListener('blur', validateTransactionId);
+        
+        // Input formatting for phone number
+        phoneInput.addEventListener('input', (e) => {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 11) value = value.substring(0, 11);
+            e.target.value = value;
+        });
+    </script>
+</body>
+</html>
