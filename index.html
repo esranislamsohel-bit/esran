@@ -1900,7 +1900,7 @@
             confirmTransaction.textContent = transactionIdInput.value.trim() || 'প্রদান করা হয়নি';
             
             // Update WhatsApp link
-            const whatsappMessage = `ইসরান ক্রিয়েটিভ কর্নার - ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার%0A%0Aঅর্ডার আইডি: ${generatedOrderId}%0Aনাম: ${nameInput.value.trim()}%0Aফোন: ${phoneInput.value.trim()}%0Aইমেইল: ${emailInput.value.trim()}%0Aপণ্য: ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল%0Aমূল্য: ৳১৫০ টাকা%0Aট্রানজেকশন আইডি: ${transactionIdInput.value.trim()}%0A%0Aদয়া করে আমার অর্ডারটি কনফার্ম করুন এবং ডাউনলোড লিংক দিন।`;
+            const whatsappMessage = `ইসরান ক্রিয়েটিভ কর্নার - ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার অর্ডার আইডি: ${generatedOrderId} নাম: ${nameInput.value.trim()} ফোন: ${phoneInput.value.trim()}ইমেইল: ${emailInput.value.trim()} পণ্য: ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল মূল্য: ৳১৫০ টাকা%0Aট্রানজেকশন আইডি: ${transactionIdInput.value.trim()} দয়া করে আমার অর্ডারটি কনফার্ম করুন এবং ডাউনলোড লিংক দিন।`;
             whatsappButton.href = `https://wa.me/8801641138934?text=${encodeURIComponent(whatsappMessage)}`;
         }
         
