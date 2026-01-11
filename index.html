@@ -3,10 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ইসরান ক্রিয়েটিভ কর্নার | ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</title>
+    <title>ইসরান ক্রিয়েটিভ কর্নার | কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary-color: #e74c3c;
+            --primary-dark: #c0392b;
+            --secondary-color: #2c3e50;
+            --secondary-light: #34495e;
+            --accent-color: #3498db;
+            --light-color: #f8f9fa;
+            --dark-color: #333;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+            --shadow: 0 5px 15px rgba(0,0,0,0.1);
+            --transition: all 0.3s ease;
+            --border-radius: 8px;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -16,8 +31,8 @@
         body {
             font-family: 'Hind Siliguri', sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
+            color: var(--dark-color);
+            background-color: #fff;
             overflow-x: hidden;
         }
         
@@ -28,7 +43,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #2c3e50;
+            background-color: var(--secondary-color);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -46,7 +61,7 @@
             height: 80px;
             border: 5px solid rgba(255,255,255,0.3);
             border-radius: 50%;
-            border-top-color: #e74c3c;
+            border-top-color: var(--primary-color);
             animation: spin 1s linear infinite;
             margin: 0 auto 20px;
         }
@@ -58,6 +73,12 @@
         .loading-content h2 {
             font-size: 28px;
             margin-bottom: 10px;
+            animation: fadeIn 1s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         .container {
@@ -69,10 +90,13 @@
         /* হেডার স্টাইল */
         header {
             background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
+            box-shadow: var(--shadow);
+            position: fixed;
             top: 0;
-            z-index: 100;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
         }
         
         .header-container {
@@ -90,12 +114,12 @@
         .logo h1 {
             font-size: 28px;
             font-weight: 700;
-            color: #2c3e50;
+            color: var(--secondary-color);
             letter-spacing: 1px;
         }
         
         .logo span {
-            color: #e74c3c;
+            color: var(--primary-color);
         }
         
         nav ul {
@@ -105,6 +129,7 @@
         
         nav ul li {
             margin-left: 25px;
+            position: relative;
         }
         
         nav ul li a {
@@ -112,273 +137,402 @@
             color: #555;
             font-weight: 500;
             font-size: 16px;
-            transition: color 0.3s;
+            transition: var(--transition);
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
         }
         
         nav ul li a:hover {
-            color: #e74c3c;
+            color: var(--primary-color);
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li a.active:after {
+            width: 100%;
+        }
+        
+        nav ul li a.active {
+            color: var(--primary-color);
+            font-weight: 600;
         }
         
         .nav-cta {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white !important;
             padding: 8px 20px;
-            border-radius: 4px;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
         }
         
         .nav-cta:hover {
-            background-color: #c0392b;
-            color: white !important;
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
         }
         
-        /* স্লাইডার ব্যানার */
-        .banner-slider {
-            position: relative;
-            width: 100%;
-            height: 500px;
-            overflow: hidden;
+        .nav-cta:hover:after {
+            width: 0;
+        }
+        
+        /* হিরো সেকশন */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 20px 100px;
             margin-bottom: 60px;
         }
         
-        .slider-container {
-            width: 100%;
-            height: 100%;
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: slideUp 1s ease;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .hero-content p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            animation: slideUp 1s ease 0.2s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            animation: slideUp 1s ease 0.4s both;
+        }
+        
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        .highlight {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        
+        /* ডেমো সেকশন */
+        .demo-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
             position: relative;
         }
         
-        .slide {
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-header h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+        
+        .section-header p {
+            color: #777;
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        
+        .demo-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .demo-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .demo-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .demo-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .demo-card:hover .demo-image img {
+            transform: scale(1.1);
+        }
+        
+        .demo-content {
+            padding: 25px;
+        }
+        
+        .demo-content h3 {
+            font-size: 22px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .demo-content h3 i {
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .demo-content p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+        
+        .demo-link {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .demo-link:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        /* লাইভ ডেমো সেকশন */
+        .live-demo-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        
+        .live-demo-box {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            border-radius: var(--border-radius);
+            padding: 40px;
+            color: white;
+            text-align: center;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .live-demo-box:before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            opacity: 0;
-            transition: opacity 1s ease-in-out;
+            background: url('https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            opacity: 0.2;
         }
         
-        .slide.active {
-            opacity: 1;
+        .live-demo-content {
+            position: relative;
+            z-index: 2;
         }
         
-        .slide-content {
-            background-color: rgba(0,0,0,0.7);
-            color: white;
-            padding: 40px;
-            border-radius: 8px;
-            max-width: 800px;
-            text-align: center;
-        }
-        
-        .slide-content h2 {
-            font-size: 48px;
+        .live-demo-content h3 {
+            font-size: 32px;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
         
-        .slide-content p {
-            font-size: 20px;
+        .live-demo-content p {
+            font-size: 18px;
             margin-bottom: 30px;
             opacity: 0.9;
         }
         
-        .slider-dots {
+        .demo-button {
+            display: inline-block;
+            background-color: white;
+            color: var(--primary-color);
+            padding: 12px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .demo-button:hover {
+            background-color: var(--light-color);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* অফার সেকশন */
+        .offer-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .offer-section:before {
+            content: '';
             position: absolute;
-            bottom: 20px;
+            top: 0;
             left: 0;
             width: 100%;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
         }
         
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: rgba(255,255,255,0.5);
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        
-        .dot.active {
-            background-color: #e74c3c;
-        }
-        
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        
-        .slider-btn {
-            background-color: rgba(0,0,0,0.5);
-            color: white;
-            border: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-size: 20px;
-            transition: background-color 0.3s;
-        }
-        
-        .slider-btn:hover {
-            background-color: rgba(231, 76, 60, 0.8);
-        }
-        
-        /* প্রোডাক্ট শোয়েস */
-        .product-showcase {
-            padding: 80px 0;
-            background-color: #fff;
-            text-align: center;
-        }
-        
-        .product-badge {
+        .offer-badge {
             display: inline-block;
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white;
             padding: 8px 20px;
             border-radius: 30px;
             font-weight: 600;
             margin-bottom: 20px;
             font-size: 18px;
+            animation: pulse 2s infinite;
         }
         
-        .product-main {
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+        
+        .offer-content {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 60px;
             margin-top: 40px;
             flex-wrap: wrap;
         }
         
-        .product-image {
+        .offer-text {
             flex: 1;
-            max-width: 500px;
             min-width: 300px;
         }
         
-        .product-image img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        
-        .product-details {
-            flex: 1;
-            max-width: 500px;
-            min-width: 300px;
-            text-align: left;
-        }
-        
-        .product-title {
+        .offer-text h2 {
             font-size: 36px;
-            color: #2c3e50;
+            color: var(--secondary-color);
             margin-bottom: 20px;
         }
         
-        .product-price {
+        .offer-price {
             font-size: 42px;
             font-weight: 700;
-            color: #e74c3c;
+            color: var(--primary-color);
             margin-bottom: 20px;
         }
         
-        .product-description {
+        .offer-text p {
             font-size: 18px;
             color: #666;
             margin-bottom: 30px;
             line-height: 1.8;
         }
         
-        /* ফিচার হাইলাইট */
-        .features-highlight {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            margin-top: 40px;
-            gap: 20px;
-        }
-        
-        .feature-box {
+        .offer-image {
             flex: 1;
-            min-width: 250px;
-            background-color: #f8f9fa;
-            padding: 25px;
-            border-radius: 8px;
+            min-width: 300px;
             text-align: center;
-            transition: transform 0.3s;
+            animation: float 3s ease-in-out infinite;
         }
         
-        .feature-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
         
-        .feature-icon {
-            font-size: 40px;
-            color: #e74c3c;
-            margin-bottom: 15px;
+        .offer-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
         }
         
-        .feature-box h4 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        /* কনটেন্ট ডিটেইলস */
-        .content-details {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-        
+        /* কন্টেন্ট সেকশন */
         .content-section {
-            margin-bottom: 60px;
-        }
-        
-        .content-section h3 {
-            font-size: 32px;
-            color: #2c3e50;
-            margin-bottom: 30px;
-            text-align: center;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .content-section h3:after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: 0;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #e74c3c;
+            padding: 80px 0;
+            background-color: #fff;
         }
         
         .content-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 25px;
+            margin-top: 40px;
         }
         
         .content-card {
             background-color: white;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             padding: 25px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-left: 5px solid var(--primary-color);
         }
         
         .content-card:hover {
@@ -388,14 +542,14 @@
         
         .content-card h4 {
             font-size: 20px;
-            color: #2c3e50;
+            color: var(--secondary-color);
             margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
         
         .content-card h4 i {
-            color: #e74c3c;
+            color: var(--primary-color);
             margin-right: 10px;
             font-size: 24px;
         }
@@ -414,88 +568,53 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #27ae60;
+            color: var(--success-color);
             font-weight: bold;
         }
         
-        .file-count {
-            display: inline-block;
-            background-color: #e74c3c;
-            color: white;
-            padding: 3px 10px;
-            border-radius: 30px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-left: 5px;
+        /* সফটওয়্যার সেকশন */
+        .software-section {
+            padding: 80px 0;
+            background-color: var(--light-color);
         }
         
-        .total-size {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-size: 24px;
-            font-weight: 700;
-            text-align: center;
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
             margin-top: 40px;
-            display: inline-block;
         }
         
-        /* ডাউনলোড নির্দেশিকা */
-        .download-guide {
-            background-color: #2c3e50;
-            color: white;
-            padding: 60px 0;
+        .software-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
             text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
-        .guide-box {
-            background-color: rgba(255,255,255,0.1);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
-            text-align: left;
+        .software-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        .guide-box ol {
-            padding-left: 20px;
-        }
-        
-        .guide-box li {
+        .software-icon {
+            font-size: 40px;
+            color: var(--primary-color);
             margin-bottom: 15px;
-            line-height: 1.6;
         }
         
-        .important-note {
-            background-color: #e74c3c;
-            color: white;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 30px;
-            font-weight: 600;
+        .software-card h4 {
+            font-size: 18px;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
         }
         
         /* অর্ডার প্রক্রিয়া */
         .order-process {
-            padding: 60px 0;
+            padding: 80px 0;
             background-color: #fff;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        
-        .section-title h2 {
-            font-size: 36px;
-            color: #2c3e50;
-            margin-bottom: 15px;
-        }
-        
-        .section-title p {
-            color: #777;
-            max-width: 700px;
-            margin: 0 auto;
         }
         
         .steps-container {
@@ -509,11 +628,23 @@
             flex-basis: 30%;
             text-align: center;
             padding: 30px 20px;
-            border-radius: 8px;
-            background-color: #f8f9fa;
+            border-radius: var(--border-radius);
+            background-color: var(--light-color);
             margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .step:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
         }
         
         .step:hover {
@@ -521,7 +652,7 @@
         }
         
         .step-icon {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white;
             width: 80px;
             height: 80px;
@@ -529,12 +660,18 @@
             border-radius: 50%;
             font-size: 32px;
             margin: 0 auto 20px;
+            transition: var(--transition);
+        }
+        
+        .step:hover .step-icon {
+            transform: scale(1.1);
+            background-color: var(--primary-dark);
         }
         
         .step h3 {
             font-size: 22px;
             margin-bottom: 15px;
-            color: #2c3e50;
+            color: var(--secondary-color);
         }
         
         .step p {
@@ -544,16 +681,18 @@
         /* অর্ডার ফর্ম */
         .order-form-container {
             background-color: white;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             box-shadow: 0 5px 20px rgba(0,0,0,0.1);
             padding: 40px;
             max-width: 800px;
             margin: 0 auto 60px;
             display: none;
+            border-top: 5px solid var(--primary-color);
         }
         
         .active-form {
             display: block;
+            animation: fadeIn 0.5s ease;
         }
         
         .form-header {
@@ -563,7 +702,7 @@
         
         .form-header h3 {
             font-size: 28px;
-            color: #2c3e50;
+            color: var(--secondary-color);
             margin-bottom: 10px;
         }
         
@@ -589,15 +728,17 @@
             border-radius: 4px;
             font-size: 16px;
             font-family: 'Hind Siliguri', sans-serif;
+            transition: var(--transition);
         }
         
         .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
             outline: none;
-            border-color: #e74c3c;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
         }
         
         .error-message {
-            color: #e74c3c;
+            color: var(--primary-color);
             font-size: 14px;
             margin-top: 5px;
             display: none;
@@ -624,9 +765,9 @@
             font-size: 16px;
             font-weight: 500;
             border: none;
-            border-radius: 4px;
+            border-radius: var(--border-radius);
             cursor: pointer;
-            transition: all 0.3s;
+            transition: var(--transition);
         }
         
         .btn-prev {
@@ -636,22 +777,25 @@
         
         .btn-prev:hover {
             background-color: #ddd;
+            transform: translateY(-2px);
         }
         
         .btn-next, .btn-submit {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white;
         }
         
         .btn-next:hover, .btn-submit:hover {
-            background-color: #c0392b;
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         /* প্রিভিউ ধাপ */
         .preview-container {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             margin-bottom: 30px;
         }
         
@@ -674,7 +818,7 @@
         /* পেমেন্ট ধাপ */
         .payment-instruction {
             background-color: #f0f7ff;
-            border-left: 4px solid #3498db;
+            border-left: 4px solid var(--accent-color);
             padding: 20px;
             margin: 30px 0;
             border-radius: 4px;
@@ -683,12 +827,13 @@
         .payment-number {
             font-size: 28px;
             font-weight: 700;
-            color: #e74c3c;
+            color: var(--primary-color);
             text-align: center;
             margin: 20px 0;
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 15px;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
+            border: 2px dashed var(--primary-color);
         }
         
         .payment-steps {
@@ -706,7 +851,7 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: #27ae60;
+            color: var(--success-color);
             font-weight: bold;
         }
         
@@ -718,13 +863,20 @@
         
         .success-icon {
             font-size: 80px;
-            color: #27ae60;
+            color: var(--success-color);
             margin-bottom: 30px;
+            animation: bounce 1s;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 60%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            80% { transform: translateY(-10px); }
         }
         
         .success-container h3 {
             font-size: 32px;
-            color: #2c3e50;
+            color: var(--secondary-color);
             margin-bottom: 20px;
         }
         
@@ -745,15 +897,16 @@
             font-size: 18px;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: var(--border-radius);
             margin-top: 20px;
-            transition: all 0.3s;
+            transition: var(--transition);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         
         .whatsapp-button:hover {
             background-color: #128C7E;
             transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
         
         .whatsapp-button i {
@@ -761,19 +914,20 @@
         }
         
         .order-id {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 15px;
             border-radius: 4px;
             font-family: monospace;
             font-size: 18px;
             margin: 20px 0;
             display: inline-block;
+            border: 2px dashed var(--primary-color);
         }
         
         .order-details {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 25px;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             margin: 30px 0;
             text-align: left;
             max-width: 600px;
@@ -783,23 +937,24 @@
         
         /* পণ্য তথ্য */
         .product-info {
-            background-color: #f8f9fa;
+            background-color: var(--light-color);
             padding: 20px;
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             margin-bottom: 25px;
             text-align: center;
+            border-left: 5px solid var(--primary-color);
         }
         
         .product-name {
             font-size: 24px;
-            color: #e74c3c;
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
         
         .product-price {
             font-size: 28px;
             font-weight: 700;
-            color: #2c3e50;
+            color: var(--secondary-color);
             margin-bottom: 10px;
         }
         
@@ -813,19 +968,21 @@
         .agreement-checkbox input {
             margin-right: 10px;
             margin-top: 3px;
+            cursor: pointer;
         }
         
         .agreement-checkbox label {
             font-size: 14px;
             color: #555;
             line-height: 1.5;
+            cursor: pointer;
         }
         
         /* ফুটার */
         footer {
-            background-color: #2c3e50;
+            background-color: var(--secondary-color);
             color: white;
-            padding: 60px 0 30px;
+            padding: 80px 0 30px;
             margin-top: 60px;
         }
         
@@ -854,7 +1011,7 @@
             bottom: 0;
             width: 50px;
             height: 2px;
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
         }
         
         .footer-column p {
@@ -874,11 +1031,12 @@
         .footer-column ul li a {
             color: #ddd;
             text-decoration: none;
-            transition: color 0.3s;
+            transition: var(--transition);
         }
         
         .footer-column ul li a:hover {
-            color: #e74c3c;
+            color: var(--primary-color);
+            padding-left: 5px;
         }
         
         .footer-bottom {
@@ -893,6 +1051,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 40px;
+            flex-wrap: wrap;
         }
         
         .step-indicator {
@@ -911,11 +1070,13 @@
             justify-content: center;
             font-weight: 600;
             margin-right: 10px;
+            transition: var(--transition);
         }
         
         .step-circle.active {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
             color: white;
+            transform: scale(1.1);
         }
         
         .step-line {
@@ -923,19 +1084,21 @@
             height: 3px;
             background-color: #ddd;
             margin: 0 10px;
+            transition: var(--transition);
         }
         
         .step-line.active {
-            background-color: #e74c3c;
+            background-color: var(--primary-color);
         }
         
         .step-name {
             color: #777;
             font-size: 14px;
+            transition: var(--transition);
         }
         
         .step-name.active {
-            color: #e74c3c;
+            color: var(--primary-color);
             font-weight: 500;
         }
         
@@ -946,7 +1109,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: #2c3e50;
+            background-color: var(--secondary-color);
             z-index: 9998;
             display: flex;
             justify-content: center;
@@ -968,14 +1131,9 @@
         
         .transition-icon {
             font-size: 60px;
-            color: #e74c3c;
+            color: var(--primary-color);
             margin-bottom: 20px;
             animation: bounce 1s infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
         
         .transition-content h3 {
@@ -999,28 +1157,20 @@
                 margin-bottom: 40px;
             }
             
-            .slide-content h2 {
+            .hero-content h2 {
                 font-size: 36px;
             }
             
-            .slide-content p {
+            .hero-content p {
                 font-size: 18px;
             }
             
-            .product-main {
+            .offer-content {
                 flex-direction: column;
             }
             
-            .product-details {
+            .offer-text {
                 text-align: center;
-            }
-            
-            .features-highlight {
-                flex-direction: column;
-            }
-            
-            .feature-box {
-                min-width: 100%;
             }
         }
         
@@ -1039,11 +1189,11 @@
                 margin: 5px 10px;
             }
             
-            .slide-content h2 {
+            .hero-content h2 {
                 font-size: 28px;
             }
             
-            .slide-content p {
+            .hero-content p {
                 font-size: 16px;
             }
             
@@ -1060,20 +1210,27 @@
                 padding: 25px;
             }
             
-            .banner-slider {
-                height: 400px;
+            .hero {
+                padding: 150px 20px 80px;
             }
             
-            .product-title {
-                font-size: 28px;
+            .section-header h2 {
+                font-size: 30px;
             }
             
-            .product-price {
-                font-size: 36px;
+            .step-indicators {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
             }
             
-            .content-section h3 {
-                font-size: 26px;
+            .step-indicator {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .step-line {
+                display: none;
             }
         }
     </style>
@@ -1100,352 +1257,275 @@
     </div>
 
     <!-- হেডার -->
-    <header>
+    <header id="header">
         <div class="container header-container">
             <div class="logo">
                 <h1>ইসরান <span>ক্রিয়েটিভ কর্নার</span></h1>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">হোম</a></li>
-                    <li><a href="#">বান্ডেলের বিবরণ</a></li>
-                    <li><a href="#">ডাউনলোড নির্দেশিকা</a></li>
-                    <li><a href="#" class="nav-cta">অর্ডার করুন</a></li>
-                    <li><a href="#">যোগাযোগ</a></li>
+                    <li><a href="#home" class="active">হোম</a></li>
+                    <li><a href="#demo">ডেমো দেখুন</a></li>
+                    <li><a href="#content">কন্টেন্ট দেখুন</a></li>
+                    <li><a href="#software">সফটওয়্যার</a></li>
+                    <li><a href="#order" class="nav-cta">অর্ডার করুন</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- স্লাইডার ব্যানার -->
-    <section class="banner-slider">
-        <div class="slider-container">
-            <!-- স্লাইড ১ -->
-            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1558655146-364adaf1fcc9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</h2>
-                    <p>একটি অর্ডারে সব ধরনের গ্রাফিক্স ডিজাইন পান - সবচেয়ে সম্পূর্ণ প্যাকেজ</p>
-                    <button id="start-order-btn" class="cta-button">এখনই অর্ডার করুন</button>
-                </div>
-            </div>
-            
-            <!-- স্লাইড ২ -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>৩০+ ধরণের ডিজাইন ফাইল</h2>
-                    <p>ফটোশপ, কোরেল ড্র, ইলাস্ট্রেটর, মকআপ, ফন্ট, লোগো এবং আরো অনেক কিছু</p>
-                    <button class="cta-button" id="view-features-btn">ফিচার দেখুন</button>
-                </div>
-            </div>
-            
-            <!-- স্লাইড ৩ -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>৫০০,০০০+ ডিজাইন ফাইল</h2>
-                    <p>একটি অর্ডারে ৫ লাখের বেশি প্রফেশনাল ডিজাইন ফাইল পান</p>
-                    <button class="cta-button">অর্ডার করুন</button>
-                </div>
-            </div>
-            
-            <!-- স্লাইড ৪ -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>জীবনকালের অ্যাক্সেস</h2>
-                    <p>একবার কিনুন, আজীবন অ্যাক্সেস পান। যেকোনো সময় ডাউনলোড করুন</p>
-                    <button class="cta-button">ডিটেইলস দেখুন</button>
-                </div>
-            </div>
-            
-            <!-- স্লাইড ৫ -->
-            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');">
-                <div class="slide-content">
-                    <h2>সাশ্রয়ী মূল্যে পেশাদার ডিজাইন</h2>
-                    <p>সকলের নাগালের মধ্যে ৫৫৫ জিবি গ্রাফিক্স ডিজাইন</p>
-                    <button class="cta-button">মাত্র ১৫০ টাকায় অর্ডার করুন</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- স্লাইডার নেভিগেশন -->
-        <div class="slider-nav">
-            <button class="slider-btn" id="prev-slide"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider-btn" id="next-slide"><i class="fas fa-chevron-right"></i></button>
-        </div>
-        
-        <!-- স্লাইডার ডটস -->
-        <div class="slider-dots" id="sliderDots">
-            <!-- ডটস জাভাস্ক্রিপ্ট দ্বারা তৈরি হবে -->
+    <!-- হিরো সেকশন -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>কম্পিউটার দোকান ও <span class="highlight">প্রিন্ট মিডিয়া</span> গ্রাফিক্স বান্ডেল</h2>
+            <p>৭০০০+ গ্রাফিক্স ডিজাইন এবং ওয়ার্ড ফাইল সহ সম্পূর্ণ প্যাকেজ - কম্পিউটার দোকান, ফটোস্ট্যাট এবং প্রিন্ট মিডিয়া ব্যবসার জন্য</p>
+            <button id="start-order-btn" class="cta-button">এখনই অর্ডার করুন</button>
         </div>
     </section>
 
-    <!-- প্রোডাক্ট শোয়েস -->
-    <section class="product-showcase">
+    <!-- ডেমো সেকশন -->
+    <section class="demo-section" id="demo">
         <div class="container">
-            <div class="product-badge">বিশেষ অফার - আজীবন অ্যাক্সেস</div>
-            <h2 class="section-title" style="margin-bottom: 10px;">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</h2>
-            <p style="font-size: 20px; color: #666; max-width: 800px; margin: 0 auto 40px;">একটি অর্ডারে সব ধরনের গ্রাফিক্স ডিজাইন পান - গ্রাফিক ডিজাইনারদের জন্য সম্পূর্ণ সমাধান</p>
+            <div class="section-header">
+                <h2>ডেমো ফাইল দেখুন</h2>
+                <p>আমাদের বান্ডেলে যা যা পাবেন তার কিছু নমুনা দেখুন</p>
+            </div>
             
-            <div class="product-main">
-                <div class="product-image">
+            <div class="demo-container">
+                <div class="demo-card">
+                    <div class="demo-image">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="ভিজিটিং কার্ড ডিজাইন">
+                    </div>
+                    <div class="demo-content">
+                        <h3><i class="fas fa-id-card"></i> ভিজিটিং কার্ড ডিজাইন</h3>
+                        <p>বিভিন্ন স্টাইলের ভিজিটিং কার্ড ডিজাইন, সম্পূর্ণ এডিটেবল</p>
+                        <a href="https://drive.google.com/drive/folders/1TKE9uI_E-4BYjFURBoOnIxOwXPEsHoBj" target="_blank" class="demo-link">ডেমো দেখুন</a>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-image">
+                        <img src="https://images.unsplash.com/photo-1586717799252-bd134ad00e26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="ব্যানার পোস্টার">
+                    </div>
+                    <div class="demo-content">
+                        <h3><i class="fas fa-flag"></i> ব্যানার পোস্টার</h3>
+                        <p>রাজনৈতিক, মাহফিল, ঈদ সহ সব ধরনের ব্যানার পোস্টার</p>
+                        <a href="https://drive.google.com/drive/folders/1TKE9uI_E-4BYjFURBoOnIxOwXPEsHoBj" target="_blank" class="demo-link">ডেমো দেখুন</a>
+                    </div>
+                </div>
+                
+                <div class="demo-card">
+                    <div class="demo-image">
+                        <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60" alt="লোগো ডিজাইন">
+                    </div>
+                    <div class="demo-content">
+                        <h3><i class="fas fa-pen-nib"></i> লোগো ডিজাইন</h3>
+                        <p>বিভিন্ন ক্যাটাগরির লোগো ডিজাইন, ব্যবসার জন্য প্রফেশনাল</p>
+                        <a href="https://drive.google.com/drive/folders/1TKE9uI_E-4BYjFURBoOnIxOwXPEsHoBj" target="_blank" class="demo-link">ডেমো দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- লাইভ ডেমো সেকশন -->
+    <section class="live-demo-section">
+        <div class="container">
+            <div class="live-demo-box">
+                <div class="live-demo-content">
+                    <h3>সম্পূর্ণ বান্ডেল লাইভ ডেমো দেখুন</h3>
+                    <p>আমাদের সম্পূর্ণ ৭০০০+ গ্রাফিক্স ডিজাইন এবং ওয়ার্ড ফাইল কালেকশনের লাইভ ডেমো দেখতে নিচের বাটনে ক্লিক করুন</p>
+                    <a href="https://drive.google.com/drive/folders/1TKE9uI_E-4BYjFURBoOnIxOwXPEsHoBj" target="_blank" class="demo-button">
+                        <i class="fas fa-external-link-alt"></i> লাইভ ডেমো দেখুন
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- অফার সেকশন -->
+    <section class="offer-section" id="content">
+        <div class="container">
+            <div class="offer-badge">বিশেষ অফার</div>
+            <div class="offer-content">
+                <div class="offer-text">
+                    <h2>ইসরান ক্রিয়েটিভ কর্নার - বিশেষ অফার!</h2>
+                    <div class="offer-price">৳ ১৫০ টাকা</div>
+                    <p><strong>মাত্র ১৫০ টাকায় পাচ্ছেন কম্পিউটার এবং ফটোস্ট্যাট বা প্রেস প্রিন্ট মিডিয়া দোকানের সব ওয়ার্ড ফাইল এবং গ্রাফিক্স ডিজাইনের এডিটেবল সোর্স ফাইল!</strong></p>
+                    <p>আপনি কি কম্পিউটার দোকান চালান? অথবা ফটোস্ট্যাট বা প্রেস প্রিন্ট মিডিয়া ব্যবসা করছেন? কিংবা নতুন ব্যবসা শুরু করতে চান? আপনি যদি স্টুডেন্ট বা গ্রাফিক্স ডিজাইনার হন, তাহলে আমাদের এই বিশাল গ্রাফিক্স কালেকশন প্যাকেজ শুধুমাত্র আপনার জন্য!</p>
+                    <button id="order-now-btn" class="cta-button">
+                        <i class="fas fa-shopping-cart"></i> এখনই অর্ডার করুন
+                    </button>
+                </div>
+                <div class="offer-image">
                     <img src="https://images.unsplash.com/photo-1634942537034-2531766767d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="গ্রাফিক্স বান্ডেল">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- কন্টেন্ট সেকশন -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>বান্ডেলে যা যা পাবেন</h2>
+                <p>৭০০০+ গ্রাফিক্স ডিজাইন এবং ওয়ার্ড ফাইল কালেকশন</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <h4><i class="fas fa-id-card"></i> ভিজিটিং কার্ড ডিজাইন</h4>
+                    <ul class="content-list">
+                        <li>বিভিন্ন স্টাইলের ভিজিটিং কার্ড</li>
+                        <li>সম্পূর্ণ এডিটেবল ফাইল</li>
+                        <li>বিজনেস কার্ড</li>
+                        <li>আইডি কার্ড ডিজাইন</li>
+                    </ul>
+                </div>
                 
-                <div class="product-details">
-                    <div class="product-price">৳ ১৫০ টাকা</div>
-                    <div class="product-description">
-                        এই বিশেষ প্যাকেজে আপনি একই মূল্যে ৫৫৫ জিবির বেশি গ্রাফিক্স ডিজাইন ফাইল পাবেন। যা একজন গ্রাফিক ডিজাইনার, মার্কেটার বা ব্যবসায়ীর জন্য সম্পূর্ণ প্যাকেজ। একবার কিনুন, আজীবন অ্যাক্সেস পান।
-                    </div>
-                    
-                    <div style="margin: 30px 0;">
-                        <button id="order-now-btn" class="cta-button" style="width: 100%;">
-                            <i class="fas fa-shopping-cart"></i> এখনই অর্ডার করুন - ৳১৫০
-                        </button>
-                    </div>
-                    
-                    <div class="features-highlight">
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-hdd"></i>
-                            </div>
-                            <h4>৫৫৫+ জিবি ফাইল</h4>
-                            <p>সম্পূর্ণ সাইজ ৫৫৫ জিবির বেশি</p>
-                        </div>
-                        
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-file-alt"></i>
-                            </div>
-                            <h4>৫০০,০০০+ ফাইল</h4>
-                            <p>৫ লাখের বেশি ডিজাইন ফাইল</p>
-                        </div>
-                        
-                        <div class="feature-box">
-                            <div class="feature-icon">
-                                <i class="fas fa-infinity"></i>
-                            </div>
-                            <h4>আজীবন অ্যাক্সেস</h4>
-                            <p>একবার কিনুন, আজীবন ব্যবহার করুন</p>
-                        </div>
-                    </div>
+                <div class="content-card">
+                    <h4><i class="fas fa-flag"></i> ব্যানার পোস্টার</h4>
+                    <ul class="content-list">
+                        <li>রাজনৈতিক ব্যানার পোস্টার</li>
+                        <li>মাহফিলের ব্যানার পোস্টার</li>
+                        <li>ঈদ মোবারক পোস্টার</li>
+                        <li>ফেস্টুন ও ব্যানার ডিজাইন</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-pen-nib"></i> লোগো ডিজাইন</h4>
+                    <ul class="content-list">
+                        <li>বিভিন্ন ক্যাটাগরির লোগো</li>
+                        <li>বাংলা টাইপোগ্রাফি</li>
+                        <li>ক্রেস্ট ডিজাইন</li>
+                        <li>ক্রিয়েটিভ আইকন ডিজাইন</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-calendar-alt"></i> বিশেষ ডিজাইন</h4>
+                    <ul class="content-list">
+                        <li>ক্যালেন্ডার ডিজাইন</li>
+                        <li>১৬ ডিসেম্বর ডিজাইন</li>
+                        <li>একুশে ফেব্রুয়ারি ডিজাইন</li>
+                        <li>২৬ শে মার্চ ডিজাইন</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-file-word"></i> ওয়ার্ড ফাইল</h4>
+                    <ul class="content-list">
+                        <li>সিভি ডিজাইন (বিভিন্ন স্টাইল)</li>
+                        <li>আবেদন পত্র</li>
+                        <li>অভিজ্ঞতা সনদ</li>
+                        <li>ওয়ারিশ সনদ</li>
+                        <li>চারিত্রিক সনদ</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-certificate"></i> সার্টিফিকেট</h4>
+                    <ul class="content-list">
+                        <li>ফ্যামিলি সার্টিফিকেট</li>
+                        <li>বিভিন্ন প্রত্যয়নপত্র</li>
+                        <li>মৃত্যু সনদ</li>
+                        <li>মাসিক/বাৎসরিক আয় সনদ</li>
+                        <li>অনাপত্তিপত্র সনদ</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-heart"></i> বিশেষ অনুষ্ঠান</h4>
+                    <ul class="content-list">
+                        <li>বিবাহের কার্ড ডিজাইন</li>
+                        <li>জন্ম স্মরণিকা</li>
+                        <li>বিবাহ স্মরণিকা</li>
+                        <li>মৃত্যু স্মরণিকা</li>
+                        <li>পূজা কালেকশন ডিজাইন</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h4><i class="fas fa-gift"></i> বোনাস ডিজাইন</h4>
+                    <ul class="content-list">
+                        <li>মগ ডিজাইন</li>
+                        <li>ইসলামিক ডিজাইন</li>
+                        <li>আলপনা ডিজাইন</li>
+                        <li>অলংকার ডিজাইন</li>
+                        <li>কোর্ট টাই ডিজাইন</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- কনটেন্ট ডিটেইলস -->
-    <section class="content-details">
+    <!-- সফটওয়্যার সেকশন -->
+    <section class="software-section" id="software">
         <div class="container">
-            <div class="content-section">
-                <h3>এই বান্ডেলে যা যা পাবেন</h3>
-                <p style="text-align: center; margin-bottom: 40px; font-size: 18px; color: #666;">একটি অর্ডারে ৫৫৫ জিবির বেশি ডিজাইন ফাইল</p>
-                
-                <div class="content-grid">
-                    <div class="content-card">
-                        <h4><i class="fas fa-camera"></i> ফটোশপ কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>ইনস্টাগ্রাম স্টোরিজ <span class="file-count">৫০০+</span></li>
-                            <li>ফ্লাইয়ার <span class="file-count">১,০০০+</span></li>
-                            <li>ব্যাকগ্রাউন্ড <span class="file-count">১৫০+</span></li>
-                            <li>অ্যানিমেটেড স্টোরিজ <span class="file-count">১০০+</span></li>
-                            <li>ব্যানার <span class="file-count">১০০+</span></li>
-                            <li>সোশ্যাল মিডিয়া <span class="file-count">১,৪০০+</span></li>
-                            <li>ভিজিটিং কার্ড <span class="file-count">৫০+</span></li>
-                            <li>ডিজিটাল কার্ড <span class="file-count">১২০+</span></li>
-                            <li>ইউটিউব <span class="file-count">১০০+</span></li>
-                            <li>ফেসবুক কভার <span class="file-count">৬০+</span></li>
-                            <li>ব্যবসায়িক কার্ড <span class="file-count">৭০+</span></li>
-                            <li>মেনু <span class="file-count">১০০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-pen-fancy"></i> কোরেল ড্র কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>টি-শার্ট ডিজাইন <span class="file-count">১,০০০+</span></li>
-                            <li>ফ্লাইয়ার <span class="file-count">১৫০+</span></li>
-                            <li>আইকন <span class="file-count">১,০০০+</span></li>
-                            <li>কাপ <span class="file-count">৫০০+</span></li>
-                            <li>পোস্টার <span class="file-count">২০০+</span></li>
-                            <li>ব্যারবার শপ <span class="file-count">১৫০+</span></li>
-                            <li>সার্টিফিকেট <span class="file-count">৫০০+</span></li>
-                            <li>ওয়েডিং ইনভাইটেশন <span class="file-count">৫০০+</span></li>
-                            <li>লোগো এ টু জেড <span class="file-count">১,৫০০+</span></li>
-                            <li>ম্যান্ডালাস <span class="file-count">১,০০০+</span></li>
-                            <li>সাবলিমেশন <span class="file-count">৫০০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-paint-brush"></i> লোগো কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>লোগো ০-০০০ <span class="file-count">৫০০+</span></li>
-                            <li>লোগো AM-AR <span class="file-count">৬০০+</span></li>
-                            <li>লোগো AS-AZ <span class="file-count">২০০+</span></li>
-                            <li>লোগো CO-CO <span class="file-count">২৫০+</span></li>
-                            <li>লোগো CP-CZ <span class="file-count">৪০০+</span></li>
-                            <li>লোগো DA-DE <span class="file-count">২০০+</span></li>
-                            <li>লোগো DF-DM <span class="file-count">৫০০+</span></li>
-                            <li>লোগো DN-DZ <span class="file-count">৫০০+</span></li>
-                            <li>লোগো GA-GE <span class="file-count">৫০০+</span></li>
-                            <li>লোগো GF-GO <span class="file-count">৪৫০+</span></li>
-                            <li>লোগো GP-GZ <span class="file-count">৫০০+</span></li>
-                            <li>লোগো IA-IM <span class="file-count">৫৫০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-font"></i> ফন্ট কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>৫০০+ ফন্ট <span class="file-count">৫০০+</span></li>
-                            <li>১২৫ হাজার সোর্স</li>
-                            <li>রক সোর্স কালেকশন</li>
-                            <li>ভিনটেজ সোর্স</li>
-                            <li>ব্যাংক ও স্টোর আইকন <span class="file-count">৫০+</span></li>
-                            <li>ই-কমার্স আইকন <span class="file-count">৭০+</span></li>
-                            <li>সোশ্যাল মিডিয়া 3D <span class="file-count">৭০+</span></li>
-                            <li>মার্কেটিং আইকন <span class="file-count">৭০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-image"></i> মকআপ কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>ভিজিটিং কার্ড মকআপ <span class="file-count">৩০+</span></li>
-                            <li>ব্র্যান্ড মকআপ <span class="file-count">৫০+</span></li>
-                            <li>কম্পিউটার মকআপ <span class="file-count">২৫+</span></li>
-                            <li>সেল ফোন মকআপ <span class="file-count">৩০+</span></li>
-                            <li>পোস্টার মকআপ <span class="file-count">২৫+</span></li>
-                            <li>বুক মকআপ <span class="file-count">২০+</span></li>
-                            <li>ফোল্ডার মকআপ <span class="file-count">২০+</span></li>
-                            <li>কাপড় মকআপ <span class="file-count">৩০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-file-image"></i> PNG ইমেজ কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>প্রাণী <span class="file-count">১,০০০+</span></li>
-                            <li>গাড়ি <span class="file-count">১,০০০+</span></li>
-                            <li>খাবার <span class="file-count">২০০+</span></li>
-                            <li>ইলেকট্রনিক্স <span class="file-count">৫০০+</span></li>
-                            <li>ফল <span class="file-count">৫০০+</span></li>
-                            <li>প্রকৃতি <span class="file-count">৫০০+</span></li>
-                            <li>টাকা <span class="file-count">১৫০+</span></li>
-                            <li>গহনা <span class="file-count">৩০০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-palette"></i> অ্যাডোব ইলাস্ট্রেটর</h4>
-                        <ul class="content-list">
-                            <li>BBQ গ্রিল <span class="file-count">৩০+</span></li>
-                            <li>বার্গার ফুড <span class="file-count">৪০+</span></li>
-                            <li>স্কাল <span class="file-count">১৮০+</span></li>
-                            <li>ক্রাউন <span class="file-count">৩০+</span></li>
-                            <li>ট্যাটু আর্ট <span class="file-count">১০০+</span></li>
-                            <li>ডিজে <span class="file-count">৫০+</span></li>
-                            <li>ফাস্ট ফুড <span class="file-count">১০০+</span></li>
-                            <li>লোগো <span class="file-count">১,০০০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-video"></i> ভিডিও এডিটিং কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>অ্যাডোব প্রিমিয়ার কালেকশন</li>
-                            <li>অ্যাডোব আফটার ইফেক্টস কালেকশন</li>
-                            <li>সাইবারপাঙ্ক V3</li>
-                            <li>সাইন পাঞ্চ</li>
-                            <li>HUD 2.0</li>
-                            <li>ইনফিনিটি টুল V3</li>
-                            <li>লিকুইড এলিমেন্ট</li>
-                            <li>মোশন প্রো গ্লিচ</li>
-                            <li>অ্যানিমেটেড স্টোরিজ</li>
-                            <li>টেকনোলজি মোশন</li>
-                            <li>ট্রানজিশন <span class="file-count">৩+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-file-powerpoint"></i> পাওয়ারপয়েন্ট কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>পাওয়ারপয়েন্ট টেমপ্লেট <span class="file-count">৭+</span></li>
-                            <li>প্রিন্ট <span class="file-count">১,০০০+</span></li>
-                            <li>স্ট্যাম্পড ভেক্টর <span class="file-count">১৮+</span></li>
-                            <li>ফ্যাক্টরি প্রিন্ট <span class="file-count">১০০+</span></li>
-                            <li>প্রিন্টেড শার্ট ডিজাইন <span class="file-count">৪০+</span></li>
-                            <li>প্রিন্টেড ফ্লিপ ফ্লপ <span class="file-count">২,০০০+</span></li>
-                            <li>প্রিন্টেড শার্ট <span class="file-count">৭০০+</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-calendar-alt"></i> বিশেষ কালেকশন</h4>
-                        <ul class="content-list">
-                            <li>ক্যালেন্ডার ২০২১ <span class="file-count">৫০+</span></li>
-                            <li>৫০০ ইন্ডিয়ান ফেস্টিভাল <span class="file-count">৪ জিবি</span></li>
-                            <li>১০০০+ এডিটেবল টি-শার্ট <span class="file-count">১+ জিবি</span></li>
-                            <li>১০০০ লোগো টিপস <span class="file-count">৬২ এমবি</span></li>
-                            <li>১৫০০+ টি-শার্ট ডিজাইন <span class="file-count">১ জিবি</span></li>
-                            <li>৩ডি ওয়াল ব্যাকগ্রাউন্ড <span class="file-count">২৫ জিবি</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="content-card">
-                        <h4><i class="fas fa-gift"></i> বোনাস ফাইল</h4>
-                        <ul class="content-list">
-                            <li>ইনস্টাগ্রাম মোশন গ্রাফিক্স <span class="file-count">১.২ জিবি</span></li>
-                            <li>গ্রাফিক্স প্যাক <span class="file-count">২+ জিবি</span></li>
-                            <li>ব্যবসায়িক ডিজাইন <span class="file-count">১ জিবি</span></li>
-                            <li>১০০ সার্টিফিকেট মেগা বান্ডেল <span class="file-count">৬৫৯ এমবি</span></li>
-                            <li>৬৪০+ প্রিমেড লোগো মকআপ <span class="file-count">১৬৭ এমবি</span></li>
-                            <li>ইনস্টাগ্রাম বান্ডেল <span class="file-count">২২৬ এমবি</span></li>
-                            <li>১০০+ বিজনেস কার্ড <span class="file-count">১ জিবি</span></li>
-                            <li>৫৯৮৫+ লাইটরুম প্রিসেট <span class="file-count">৫৫ এমবি</span></li>
-                            <li>৬০০+ মেগা লোগো টেমপ্লেট <span class="file-count">৮৬২ এমবি</span></li>
-                            <li>১০০০+ টি-শার্ট ডিজাইন <span class="file-count">৫০০+ এমবি</span></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="text-align: center; margin-top: 40px;">
-                    <div class="total-size">মোট সাইজ: ৫৫৫+ জিবি</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ডাউনলোড নির্দেশিকা -->
-    <section class="download-guide">
-        <div class="container">
-            <div class="section-title">
-                <h2 style="color: white;">ডাউনলোড নির্দেশিকা</h2>
-                <p style="color: rgba(255,255,255,0.8);">ফাইল ডাউনলোড করতে এই নির্দেশিকা অনুসরণ করুন</p>
+            <div class="section-header">
+                <h2>প্রয়োজনীয় সফটওয়্যার কালেকশন</h2>
+                <p>গ্রাফিক্স ডিজাইন এবং অফিস কাজের জন্য প্রয়োজনীয় সব সফটওয়্যার</p>
             </div>
             
-            <div class="guide-box">
-                <ol>
-                    <li><strong>WinRAR ইন্সটল করুন:</strong> ফাইল এক্সট্র্যাক্ট করার জন্য WinRAR সফটওয়্যার ইন্সটল করুন। ডাউনলোড লিংক: <a href="https://winrar.en.uptodown.com/windows" style="color: #3498db;">https://winrar.en.uptodown.com/windows</a></li>
-                    <li><strong>গুগল অ্যাকাউন্ট ব্যবহার করুন:</strong> ডাউনলোড করতে গুগল অ্যাকাউন্ট ব্যবহার করার পরামর্শ দেওয়া হচ্ছে।</li>
-                    <li><strong>একসাথে সব ফাইল ডাউনলোড করবেন না:</strong> আপনার ইন্টারনেট স্পিড এবং IP লিমিটেশনের কারণে ফাইল আটকে যেতে পারে। একবারে এক বা দুইটি ফাইল ডাউনলোড করুন।</li>
-                    <li><strong>পাসওয়ার্ড:</strong> কিছু ফাইল পাসওয়ার্ড প্রটেক্টেড। প্রয়োজনীয় পাসওয়ার্ড দেওয়া হবে।</li>
-                    <li><strong>ডাউনলোড লিংক ভ্যালিডিটি:</strong> লিংকগুলো আজীবনের জন্য ভ্যালিড। তবে যে কোন সময় লিংক পরিবর্তন হতে পারে, তাই দ্রুত ডাউনলোড করে রাখুন।</li>
-                    <li><strong>ব্যাকআপ রাখুন:</strong> ডাউনলোড করা ফাইলগুলো আপনার কম্পিউটার বা ক্লাউড স্টোরেজে ব্যাকআপ রাখুন।</li>
-                </ol>
-            </div>
-            
-            <div class="important-note">
-                <i class="fas fa-exclamation-triangle"></i> গুরুত্বপূর্ণ: লিংকগুলো গুগল ড্রাইভের এবং ভবিষ্যতে পরিবর্তন হতে পারে। আপনি ফাইল ডাউনলোড করে আপনার ডিভাইসে সংরক্ষণ করবেন, তা না হলে ভবিষ্যতে ফাইল নাও পেতে পারেন।
+            <div class="software-grid">
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h4>Adobe Photoshop</h4>
+                    <p>গ্রাফিক্স ডিজাইনের জন্য</p>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h4>Adobe Illustrator</h4>
+                    <p>ভেক্টর ডিজাইনের জন্য</p>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <h4>MS Office Suite</h4>
+                    <p>ওয়ার্ড, এক্সেল, পাওয়ারপয়েন্ট</p>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>Premiere Pro</h4>
+                    <p>ভিডিও এডিটিং এর জন্য</p>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h4>After Effects</h4>
+                    <p>মোশন গ্রাফিক্সের জন্য</p>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h4>Adobe InDesign</h4>
+                    <p>পেজ লেআউট ডিজাইনের জন্য</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- অর্ডার প্রক্রিয়া -->
-    <section class="order-process">
+    <section class="order-process" id="order">
         <div class="container">
-            <div class="section-title">
+            <div class="section-header">
                 <h2>অর্ডার করার সহজ প্রক্রিয়া</h2>
-                <p>মাত্র ৩টি সহজ ধাপে আপনার ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার করুন</p>
+                <p>মাত্র ৩টি সহজ ধাপে আপনার গ্রাফিক্স বান্ডেল অর্ডার করুন</p>
             </div>
             
             <div class="steps-container">
@@ -1462,7 +1542,7 @@
                         <i class="fas fa-money-bill-wave"></i>
                     </div>
                     <h3>পেমেন্ট করুন</h3>
-                    <p>বিকাশে ০১৬৪১১৩৮৯৩৪ নম্বরে ১৫০ টাকা পাঠান এবং ট্রানজেকশন আইডি সংরক্ষণ করুন।</p>
+                    <p>বিকাশে ০১৫১৮৯২৭৮২০ নম্বরে ১৫০ টাকা পাঠান এবং ট্রানজেকশন আইডি সংরক্ষণ করুন।</p>
                 </div>
                 
                 <div class="step">
@@ -1513,9 +1593,9 @@
             </div>
             
             <div class="product-info">
-                <div class="product-name">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</div>
+                <div class="product-name">কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল</div>
                 <div class="product-price">৳ ১৫০ টাকা</div>
-                <div style="color: #666; font-size: 16px; margin-top: 10px;">একটি অর্ডারে ৫০০,০০০+ ডিজাইন ফাইল</div>
+                <div style="color: #666; font-size: 16px; margin-top: 10px;">৭০০০+ গ্রাফিক্স ডিজাইন এবং ওয়ার্ড ফাইল, আজীবন অ্যাক্সেস</div>
             </div>
             
             <form id="customer-form">
@@ -1539,7 +1619,7 @@
                 
                 <div class="agreement-checkbox">
                     <input type="checkbox" id="agreement" name="agreement" required>
-                    <label for="agreement">আমি স্বীকার করছি যে আমি সঠিক তথ্য দিয়েছি এবং বুঝতে পেরেছি যে যদি আমি ভুল তথ্য দিই, তাহলে আমার অর্ডার সম্পূর্ণ হবে না এবং টাকা ফেরত পাওয়া যাবে না। আমি ডাউনলোড নির্দেশিকা পড়েছি এবং বুঝেছি।</label>
+                    <label for="agreement">আমি স্বীকার করছি যে আমি সঠিক তথ্য দিয়েছি এবং বুঝতে পেরেছি যে যদি আমি ভুল তথ্য দিই, তাহলে আমার অর্ডার সম্পূর্ণ হবে না এবং টাকা ফেরত পাওয়া যাবে না।</label>
                 </div>
                 
                 <div class="form-navigation">
@@ -1557,7 +1637,7 @@
             </div>
             
             <div class="product-info">
-                <div class="product-name">৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</div>
+                <div class="product-name">কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল</div>
                 <div class="product-price">৳ ১৫০ টাকা</div>
             </div>
             
@@ -1576,7 +1656,7 @@
                 </div>
                 <div class="preview-item">
                     <span class="preview-label">পণ্য:</span>
-                    <span>৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</span>
+                    <span>কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল</span>
                 </div>
                 <div class="preview-item">
                     <span class="preview-label">মূল্য:</span>
@@ -1598,7 +1678,7 @@
             </div>
             
             <div class="payment-instruction">
-                <h4 style="margin-bottom: 15px; color: #2c3e50;">পেমেন্ট করার ধাপসমূহ:</h4>
+                <h4 style="margin-bottom: 15px; color: var(--secondary-color);">পেমেন্ট করার ধাপসমূহ:</h4>
                 <ol class="payment-steps">
                     <li>আপনার বিকাশ অ্যাপ খুলুন</li>
                     <li>"Send Money" অপশনে ক্লিক করুন</li>
@@ -1609,7 +1689,7 @@
             </div>
             
             <div class="payment-number">
-                <i class="fas fa-mobile-alt"></i> ০১৬৪১১৩৮৯৩৪
+                <i class="fas fa-mobile-alt"></i> ০১৫১৮৯২৭৮২০
             </div>
             
             <div class="form-group">
@@ -1633,14 +1713,14 @@
                 
                 <h3>অর্ডার সফলভাবে জমা দেওয়া হয়েছে!</h3>
                 <p>আপনার অর্ডার জন্য ধন্যবাদ। আপনার অর্ডার আইডি হল:</p>
-                <div class="order-id" id="order-id-display">ESRAN-GRAPHICS-00123</div>
+                <div class="order-id" id="order-id-display">ESRAN-PRINT-00123</div>
                 
                 <div class="order-details">
-                    <h4 style="margin-bottom: 15px; color: #2c3e50;">আপনার অর্ডার বিবরণ:</h4>
+                    <h4 style="margin-bottom: 15px; color: var(--secondary-color);">আপনার অর্ডার বিবরণ:</h4>
                     <p><strong>নাম:</strong> <span id="confirm-name">প্রদান করা হয়নি</span></p>
                     <p><strong>ফোন:</strong> <span id="confirm-phone">প্রদান করা হয়নি</span></p>
                     <p><strong>ইমেইল:</strong> <span id="confirm-email">প্রদান করা হয়নি</span></p>
-                    <p><strong>পণ্য:</strong> ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল</p>
+                    <p><strong>পণ্য:</strong> কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল</p>
                     <p><strong>মূল্য:</strong> ৳ ১৫০ টাকা</p>
                     <p><strong>ট্রানজেকশন আইডি:</strong> <span id="confirm-transaction">প্রদান করা হয়নি</span></p>
                 </div>
@@ -1648,12 +1728,12 @@
                 <p>আপনার অর্ডার কনফার্ম করতে এবং ডাউনলোড লিংক পেতে দয়া করে নিচের WhatsApp বাটনে ক্লিক করুন এবং স্বয়ংক্রিয়ভাবে পাঠানো মেসেজটি সেন্ড করুন।</p>
                 <p><strong>মনে রাখবেন:</strong> WhatsApp এ কনফার্ম না করলে আপনার ডাউনলোড লিংক পাঠানো হবে না।</p>
                 
-                <a href="https://wa.me/8801641138934" target="_blank" class="whatsapp-button" id="whatsapp-button">
+                <a href="https://wa.me/8801518927820" target="_blank" class="whatsapp-button" id="whatsapp-button">
                     <i class="fab fa-whatsapp"></i> WhatsApp এ কনফার্ম করুন এবং লিংক পান
                 </a>
                 
                 <p style="margin-top: 30px; font-size: 16px; color: #777;">
-                    কোন সমস্যা হলে কল করুন: <strong>০১৬৪১১৩৮৯৩৪</strong><br>
+                    কোন সমস্যা হলে কল করুন: <strong>০১৫১৮৯২৭৮২০</strong><br>
                     আমাদের ঠিকানা: হাউস ০১, রোড ০১, মোহনগর প্রজেক্ট, পশ্চিম রামপুরা, ঢাকা ১২১৯
                 </p>
             </div>
@@ -1661,30 +1741,30 @@
     </div>
 
     <!-- ফুটার -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>ইসরান ক্রিয়েটিভ কর্নার</h3>
-                    <p>আমরা গ্রাফিক ডিজাইনারদের জন্য সম্পূর্ণ সমাধান নিয়ে আসছি। ৫৫৫+ জিবি গ্রাফিক্স বান্ডেলের মাধ্যমে আপনি পাবেন সব ধরনের ডিজাইন ফাইল।</p>
+                    <p>কম্পিউটার দোকান, ফটোস্ট্যাট এবং প্রিন্ট মিডিয়া ব্যবসার জন্য সম্পূর্ণ গ্রাফিক্স সমাধান। ২০১৫ সাল থেকে বিশ্বস্ত সেবা।</p>
                     <p>একবার কিনুন, আজীবন ব্যবহার করুন।</p>
                 </div>
                 
                 <div class="footer-column">
                     <h3>দ্রুত লিংক</h3>
                     <ul>
-                        <li><a href="#">হোম</a></li>
-                        <li><a href="#">বান্ডেলের বিবরণ</a></li>
-                        <li><a href="#">ডাউনলোড নির্দেশিকা</a></li>
-                        <li><a href="#">অর্ডার করুন</a></li>
-                        <li><a href="#">যোগাযোগ</a></li>
+                        <li><a href="#home">হোম</a></li>
+                        <li><a href="#demo">ডেমো দেখুন</a></li>
+                        <li><a href="#content">কন্টেন্ট দেখুন</a></li>
+                        <li><a href="#software">সফটওয়্যার</a></li>
+                        <li><a href="#order">অর্ডার করুন</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
                     <h3>যোগাযোগের তথ্য</h3>
                     <p><i class="fas fa-map-marker-alt"></i> হাউস ০১, রোড ০১, মোহনগর প্রজেক্ট, পশ্চিম রামপুরা, ঢাকা ১২১৯</p>
-                    <p><i class="fas fa-phone"></i> ০১৬৪১১৩৮৯৩৪</p>
+                    <p><i class="fas fa-phone"></i> ০১৫১৮৯২৭৮২০</p>
                     <p><i class="fas fa-envelope"></i> support@esrancreative.com</p>
                     <p><i class="fas fa-clock"></i> সকাল ৯টা - রাত ১০টা (প্রতিদিন)</p>
                 </div>
@@ -1702,7 +1782,6 @@
         const transitionScreen = document.getElementById('transitionScreen');
         const startOrderBtn = document.getElementById('start-order-btn');
         const orderNowBtn = document.getElementById('order-now-btn');
-        const viewFeaturesBtn = document.getElementById('view-features-btn');
         
         const step1Form = document.getElementById('form-step-1');
         const step2Preview = document.getElementById('form-step-2');
@@ -1745,15 +1824,11 @@
         const confirmTransaction = document.getElementById('confirm-transaction');
         const whatsappButton = document.getElementById('whatsapp-button');
         
-        // Slider elements
-        const slides = document.querySelectorAll('.slide');
-        const prevSlideBtn = document.getElementById('prev-slide');
-        const nextSlideBtn = document.getElementById('next-slide');
-        const sliderDots = document.getElementById('sliderDots');
+        // Navigation elements
+        const navLinks = document.querySelectorAll('nav ul li a');
         
         // Current step tracking
         let currentStep = 1;
-        let currentSlide = 0;
         let generatedOrderId = '';
         
         // লোডিং স্ক্রিন লুকানো
@@ -1765,57 +1840,10 @@
                 }, 500);
                 
                 // Generate order ID
-                generatedOrderId = 'ESRAN-GRAPHICS-' + new Date().getFullYear() + '-' + Math.floor(10000 + Math.random() * 90000);
+                generatedOrderId = 'ESRAN-PRINT-' + new Date().getFullYear() + '-' + Math.floor(10000 + Math.random() * 90000);
                 orderIdDisplay.textContent = generatedOrderId;
-                
-                // Create slider dots
-                createSliderDots();
             }, 1500);
         });
-        
-        // স্লাইডার ডটস তৈরি
-        function createSliderDots() {
-            for (let i = 0; i < slides.length; i++) {
-                const dot = document.createElement('div');
-                dot.classList.add('dot');
-                if (i === 0) dot.classList.add('active');
-                dot.dataset.index = i;
-                dot.addEventListener('click', () => {
-                    goToSlide(i);
-                });
-                sliderDots.appendChild(dot);
-            }
-        }
-        
-        // স্লাইড পরিবর্তন
-        function goToSlide(n) {
-            slides[currentSlide].classList.remove('active');
-            document.querySelectorAll('.dot')[currentSlide].classList.remove('active');
-            
-            currentSlide = n;
-            if (currentSlide >= slides.length) currentSlide = 0;
-            if (currentSlide < 0) currentSlide = slides.length - 1;
-            
-            slides[currentSlide].classList.add('active');
-            document.querySelectorAll('.dot')[currentSlide].classList.add('active');
-        }
-        
-        // পরবর্তী স্লাইড
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-        
-        // আগের স্লাইড
-        function prevSlide() {
-            goToSlide(currentSlide - 1);
-        }
-        
-        // স্লাইডার ইভেন্ট লিসেনার
-        prevSlideBtn.addEventListener('click', prevSlide);
-        nextSlideBtn.addEventListener('click', nextSlide);
-        
-        // অটো স্লাইড পরিবর্তন
-        setInterval(nextSlide, 5000);
         
         // Start order process
         startOrderBtn.addEventListener('click', () => {
@@ -1824,10 +1852,6 @@
         
         orderNowBtn.addEventListener('click', () => {
             document.querySelector('.order-form-container.active-form').scrollIntoView({ behavior: 'smooth' });
-        });
-        
-        viewFeaturesBtn.addEventListener('click', () => {
-            document.querySelector('.content-details').scrollIntoView({ behavior: 'smooth' });
         });
         
         // ট্রানজিশন স্ক্রিন দেখানো
@@ -1900,8 +1924,8 @@
             confirmTransaction.textContent = transactionIdInput.value.trim() || 'প্রদান করা হয়নি';
             
             // Update WhatsApp link
-            const whatsappMessage = `ইসরান ক্রিয়েটিভ কর্নার - ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল অর্ডার অর্ডার আইডি: ${generatedOrderId} নাম: ${nameInput.value.trim()} ফোন: ${phoneInput.value.trim()}ইমেইল: ${emailInput.value.trim()} পণ্য: ৫৫৫+ জিবি গ্রাফিক্স বান্ডেল মূল্য: ৳১৫০ টাকা%0Aট্রানজেকশন আইডি: ${transactionIdInput.value.trim()} দয়া করে আমার অর্ডারটি কনফার্ম করুন এবং ডাউনলোড লিংক দিন।`;
-            whatsappButton.href = `https://wa.me/8801641138934?text=${encodeURIComponent(whatsappMessage)}`;
+            const whatsappMessage = `ইসরান ক্রিয়েটিভ কর্নার - কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল অর্ডার%0A%0Aঅর্ডার আইডি: ${generatedOrderId}%0Aনাম: ${nameInput.value.trim()}%0Aফোন: ${phoneInput.value.trim()}%0Aইমেইল: ${emailInput.value.trim()}%0Aপণ্য: কম্পিউটার দোকান ও প্রিন্ট মিডিয়া গ্রাফিক্স বান্ডেল%0Aমূল্য: ৳১৫০ টাকা%0Aট্রানজেকশন আইডি: ${transactionIdInput.value.trim()}%0A%0Aদয়া করে আমার অর্ডারটি কনফার্ম করুন এবং ডাউনলোড লিংক দিন।`;
+            whatsappButton.href = `https://wa.me/8801518927820?text=${encodeURIComponent(whatsappMessage)}`;
         }
         
         // Update step indicators
@@ -2005,6 +2029,63 @@
             let value = e.target.value.replace(/\D/g, '');
             if (value.length > 11) value = value.substring(0, 11);
             e.target.value = value;
+        });
+        
+        // Navigation active state
+        function updateActiveNav() {
+            let current = '';
+            
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', updateActiveNav);
+        
+        // Smooth scrolling for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#order') {
+                    document.querySelector('.order-form-container.active-form').scrollIntoView({ behavior: 'smooth' });
+                } else {
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                
+                // Update active nav
+                navLinks.forEach(link => link.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+        
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.boxShadow = 'var(--shadow)';
+            }
         });
     </script>
 </body>
